@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joy Trading — Global Export & Import | Logistics Solutions</title>
-    <meta name="description" content="Joy Trading delivers end-to-end logistics solutions — ocean freight, air cargo, road transport, warehousing and customs clearance across the globe.">
-    
-    <!-- Google Fonts -->
+    <meta name="description"
+        content="Joy Trading delivers end-to-end logistics solutions — ocean freight, air cargo, road transport, warehousing and customs clearance across the globe.">
+
+    <!-- Google Fonts: Premium Typography Suite (Playfair Display + Outfit + Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
-    
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
     <!-- FontAwesome Icons CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href=".vscode/asstes/imges/logo.png">
 
     <!-- External Project Stylesheet -->
     <link rel="stylesheet" href=".vscode/asstes/css/style.css">
 </head>
+
 <body>
 
     <!-- 1. TOPBAR -->
@@ -52,10 +60,10 @@
             <nav class="navbar">
                 <!-- Brand Logo -->
                 <a href="index.html" class="brand-logo">
-                    <div class="logo-symbol"></div>
+                    <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
                     <div class="logo-text-group">
                         <span class="logo-title">JOY <span>TRADING</span></span>
-                        <span class="logo-subtitle">GLOBAL EXPORT & IMPORT</span>
+                        <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
                     </div>
                 </a>
 
@@ -70,7 +78,7 @@
                         <a href="#solutions" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#industries" class="nav-link">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                        <a href="#projects" class="nav-link">Projects <i class="fa-solid fa-chevron-down"></i></a>
                     </li>
                     <li class="nav-item">
                         <a href="#resources" class="nav-link">Resources <i class="fa-solid fa-chevron-down"></i></a>
@@ -80,54 +88,92 @@
 
                 <!-- CTA Button -->
                 <div class="nav-actions">
-                    <button onclick="openQuoteModal()" class="btn btn-navy">Get a Quote</button>
-                    <button class="mobile-menu-btn" onclick="toggleMobileNav()"><i class="fa-solid fa-bars"></i></button>
+                    <button onclick="openQuoteModal()" class="btn-get-quote">Get a Quote</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileNav()"><i
+                            class="fa-solid fa-bars"></i></button>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- 3. HERO SECTION (Full Panoramic Background) -->
+    <!-- 3. HERO SECTION (1:1 Exact Match with Reference Design) -->
     <section class="hero-section" id="home">
         <div class="container">
             <div class="hero-grid">
                 <!-- Left Content -->
                 <div class="hero-content">
                     <h1 class="hero-title">
-                        Connecting The World,
-                        <span class="highlight">Delivering Excellence.</span>
+                        <span class="title-line-1">Connecting The World,</span>
+                        <span class="title-line-2">Delivering Excellence.</span>
                     </h1>
                     <p class="hero-desc">
-                        End-to-end logistics and supply chain solutions that move your business forward — faster, smarter and safer.
+                        End-to-end logistics and supply chain solutions that move your business forward — faster,
+                        smarter and safer.
                     </p>
-                    
+
                     <div class="hero-actions">
-                        <a href="#services" class="btn btn-navy">
+                        <a href="#services" class="btn-hero-primary">
                             Our Services <i class="fa-solid fa-arrow-right"></i>
                         </a>
-                        <button onclick="openQuoteModal()" class="btn btn-outline">
+                        <button onclick="openQuoteModal()" class="btn-hero-secondary">
                             Request a Quote
                         </button>
                     </div>
 
-                    <!-- Trust Stats Under CTA -->
+                    <!-- 3 Feature Items Under CTA (Bottom-Left) -->
                     <div class="hero-trust-badges">
                         <div class="trust-badge">
-                            <div class="trust-badge-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div class="trust-badge-icon">
+                                <svg class="feature-icon-svg" viewBox="0 0 36 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="18" r="14" stroke="#D89025" stroke-width="1.5"
+                                        stroke-dasharray="2.5 2" />
+                                    <circle cx="18" cy="18" r="9.5" stroke="#D89025" stroke-width="1.3" />
+                                    <path d="M18 4V8M18 28V32M4 18H8M28 18H32" stroke="#D89025" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <ellipse cx="18" cy="18" rx="4.5" ry="9.5" stroke="#D89025" stroke-width="1.1" />
+                                    <line x1="8.5" y1="18" x2="27.5" y2="18" stroke="#D89025" stroke-width="1.1" />
+                                </svg>
+                            </div>
                             <div class="trust-badge-info">
                                 <h4>Global Reach</h4>
                                 <p>100+ Countries</p>
                             </div>
                         </div>
+
                         <div class="trust-badge">
-                            <div class="trust-badge-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="trust-badge-icon">
+                                <svg class="feature-icon-svg" viewBox="0 0 36 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="19" r="13" stroke="#D89025" stroke-width="1.5" />
+                                    <path d="M15 4H21M18 4V6" stroke="#D89025" stroke-width="1.5"
+                                        stroke-linecap="round" />
+                                    <path d="M18 11V19L23 22" stroke="#D89025" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <circle cx="7" cy="10" r="1" fill="#D89025" />
+                                    <circle cx="29" cy="10" r="1" fill="#D89025" />
+                                </svg>
+                            </div>
                             <div class="trust-badge-info">
                                 <h4>On-Time Delivery</h4>
                                 <p>99% On-Time</p>
                             </div>
                         </div>
+
                         <div class="trust-badge">
-                            <div class="trust-badge-icon"><i class="fa-solid fa-headset"></i></div>
+                            <div class="trust-badge-icon">
+                                <svg class="feature-icon-svg" viewBox="0 0 36 36" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="18" cy="18" r="14" stroke="#D89025" stroke-width="1.4"
+                                        stroke-dasharray="3 2" />
+                                    <path
+                                        d="M11 18C11 14.134 14.134 11 18 11C21.866 11 25 14.134 25 18V21C25 22.1046 24.1046 23 23 23H22V17H24.5V18C24.5 14.4101 21.5899 11.5 18 11.5C14.4101 11.5 11.5 14.4101 11.5 18V17H14V23H13C11.8954 23 11 22.1046 11 21V18Z"
+                                        fill="#D89025" />
+                                    <path d="M22 23V25.5C22 26.3284 21.3284 27 20.5 27H17.5" stroke="#D89025"
+                                        stroke-width="1.4" stroke-linecap="round" />
+                                    <circle cx="16.5" cy="27" r="1" fill="#D89025" />
+                                </svg>
+                            </div>
                             <div class="trust-badge-info">
                                 <h4>24/7 Support</h4>
                                 <p>Always Available</p>
@@ -136,37 +182,236 @@
                     </div>
                 </div>
 
-                <!-- Right Visual Spacer allowing the panoramic background (ship, truck, plane) to be showcased -->
+                <!-- Right Visual Spacer (Showcases the panoramic logistics background) -->
                 <div class="hero-visual-spacer"></div>
             </div>
+        </div>
+    </section>
 
-            <!-- 4. FLOATING QUICK SERVICES BAR -->
-            <div class="quick-services-wrap">
-                <div class="quick-services-card">
-                    <div class="quick-service-item" onclick="openQuoteModal('Ocean Freight')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-ship"></i></div>
-                        <span class="qs-title">Ocean Freight</span>
+    <!-- 4. QUICK SERVICES BAR SECTION (1:1 Exact Match with Reference Design) -->
+    <section class="quick-services-section">
+        <div class="container">
+            <div class="quick-services-card">
+                <!-- 1. Ocean Freight -->
+                <div class="quick-service-item" onclick="openQuoteModal('Ocean Freight')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cargo stack on deck (Gold) -->
+                            <rect x="23" y="10" width="8" height="6" rx="1" stroke="#D89025" stroke-width="1.8"
+                                fill="#FFFBF5" />
+                            <rect x="18" y="16" width="18" height="7" rx="1" stroke="#D89025" stroke-width="1.8"
+                                fill="#FFFBF5" />
+                            <line x1="24" y1="16" x2="24" y2="23" stroke="#D89025" stroke-width="1.5" />
+                            <line x1="30" y1="16" x2="30" y2="23" stroke="#D89025" stroke-width="1.5" />
+                            <!-- Ship Hull (Navy) -->
+                            <path d="M12 25H42L37 38C35 41 19 41 17 38L12 25Z" stroke="#071B3A" stroke-width="2"
+                                stroke-linejoin="round" fill="#FFFFFF" />
+                            <line x1="27" y1="25" x2="27" y2="39" stroke="#071B3A" stroke-width="1.6" />
+                            <!-- Ocean Waves (Gold) -->
+                            <path
+                                d="M10 44C13 41.5 16 41.5 19 44C22 46.5 25 46.5 28 44C31 41.5 34 41.5 37 44C40 46.5 43 46.5 45 44"
+                                stroke="#D89025" stroke-width="2" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <div class="quick-service-item" onclick="openQuoteModal('Air Freight')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
-                        <span class="qs-title">Air Freight</span>
+                    <span class="qs-title">Ocean Freight</span>
+                </div>
+
+                <!-- 2. Air Freight -->
+                <div class="quick-service-item" onclick="openQuoteModal('Air Freight')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Fuselage Body (Navy) -->
+                            <path
+                                d="M13 36L18 33L26 19C27.5 16.5 30.5 15.5 33 17C35.5 18.5 36 21.5 34.5 24L28 35L24 39L13 36Z"
+                                stroke="#071B3A" stroke-width="2" stroke-linejoin="round" fill="#FFFFFF" />
+                            <!-- Left Wing (Navy) -->
+                            <path d="M22 26L13 22L11 25L18 31" stroke="#071B3A" stroke-width="1.8"
+                                stroke-linejoin="round" />
+                            <!-- Right Wing (Gold) -->
+                            <path d="M29 30L40 40L42 37L33 26" stroke="#D89025" stroke-width="2" stroke-linejoin="round"
+                                fill="#FFFBF5" />
+                            <!-- Tail Fin (Gold) -->
+                            <path d="M14 36L8 37L10 33L16 34" stroke="#D89025" stroke-width="1.8"
+                                stroke-linejoin="round" />
+                            <circle cx="28" cy="22" r="1" fill="#071B3A" />
+                            <circle cx="31" cy="21" r="1" fill="#071B3A" />
+                        </svg>
                     </div>
-                    <div class="quick-service-item" onclick="openQuoteModal('Road Transport')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-truck-moving"></i></div>
-                        <span class="qs-title">Road Transport</span>
+                    <span class="qs-title">Air Freight</span>
+                </div>
+
+                <!-- 3. Road Transport -->
+                <div class="quick-service-item" onclick="openQuoteModal('Road Transport')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cargo Box (Gold) -->
+                            <rect x="9" y="16" width="22" height="19" rx="2" stroke="#D89025" stroke-width="2"
+                                fill="#FFFBF5" />
+                            <line x1="9" y1="23" x2="31" y2="23" stroke="#D89025" stroke-width="1.4"
+                                stroke-dasharray="2 2" />
+                            <!-- Cab (Navy) -->
+                            <path d="M31 22H39L44 28V35H31V22Z" stroke="#071B3A" stroke-width="2"
+                                stroke-linejoin="round" fill="#FFFFFF" />
+                            <path d="M33 24H38.5L41.5 28H33V24Z" stroke="#071B3A" stroke-width="1.6" fill="#F1F5F9" />
+                            <!-- Wheels (Navy + Gold center) -->
+                            <circle cx="16" cy="37" r="4" stroke="#071B3A" stroke-width="2" fill="#FFFFFF" />
+                            <circle cx="16" cy="37" r="1.5" fill="#D89025" />
+                            <circle cx="38" cy="37" r="4" stroke="#071B3A" stroke-width="2" fill="#FFFFFF" />
+                            <circle cx="38" cy="37" r="1.5" fill="#D89025" />
+                        </svg>
                     </div>
-                    <div class="quick-service-item" onclick="openQuoteModal('Warehousing & Distribution')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-warehouse"></i></div>
-                        <span class="qs-title">Warehousing</span>
+                    <span class="qs-title">Road Transport</span>
+                </div>
+
+                <!-- 4. Warehousing -->
+                <div class="quick-service-item" onclick="openQuoteModal('Warehousing & Distribution')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Peaked Roof (Gold) -->
+                            <path d="M9 22L27 12L45 22" stroke="#D89025" stroke-width="2.2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="27" cy="18" r="2" stroke="#071B3A" stroke-width="1.5" fill="#FFFFFF" />
+                            <!-- Building Walls (Navy) -->
+                            <path d="M12 21V40H42V21" stroke="#071B3A" stroke-width="2" stroke-linejoin="round"
+                                fill="#FFFFFF" />
+                            <!-- Rollup Doorway (Navy) -->
+                            <rect x="20" y="27" width="14" height="13" stroke="#071B3A" stroke-width="1.8"
+                                fill="#F8FAFC" />
+                            <!-- Stacked Pallet Boxes inside (Gold) -->
+                            <rect x="23" y="33" width="4" height="4" stroke="#D89025" stroke-width="1.3"
+                                fill="#FFFBF5" />
+                            <rect x="27" y="33" width="4" height="4" stroke="#D89025" stroke-width="1.3"
+                                fill="#FFFBF5" />
+                            <rect x="25" y="29" width="4" height="4" stroke="#D89025" stroke-width="1.3"
+                                fill="#FFFBF5" />
+                        </svg>
                     </div>
-                    <div class="quick-service-item" onclick="openQuoteModal('Customs Clearance')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-passport"></i></div>
-                        <span class="qs-title">Customs Clearance</span>
+                    <span class="qs-title">Warehousing</span>
+                </div>
+
+                <!-- 5. Customs Clearance -->
+                <div class="quick-service-item" onclick="openQuoteModal('Customs Clearance')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Officer Cap (Gold & Navy) -->
+                            <path d="M19 16C19 13.5 22.5 12 27 12C31.5 12 35 13.5 35 16H19Z" stroke="#D89025"
+                                stroke-width="1.8" fill="#FFFBF5" />
+                            <path d="M16 16H38L36 18.5H18L16 16Z" stroke="#071B3A" stroke-width="1.8" fill="#071B3A" />
+                            <!-- Head Outline (Navy) -->
+                            <circle cx="27" cy="22" r="5" stroke="#071B3A" stroke-width="1.8" fill="#FFFFFF" />
+                            <!-- Uniform Collar & Folded Arms (Gold & Navy) -->
+                            <path d="M14 41C14 33 19 30 27 30C35 30 40 33 40 41" stroke="#D89025" stroke-width="2"
+                                stroke-linecap="round" />
+                            <path d="M22 30L25 36L27 30L29 36L32 30" stroke="#071B3A" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M18 36H36" stroke="#D89025" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
                     </div>
-                    <div class="quick-service-item" onclick="openQuoteModal('Project Cargo')">
-                        <div class="qs-icon-box"><i class="fa-solid fa-dolly"></i></div>
-                        <span class="qs-title">Project Cargo</span>
+                    <span class="qs-title">Customs Clearance</span>
+                </div>
+
+                <!-- 6. Project Cargo -->
+                <div class="quick-service-item" onclick="openQuoteModal('Project Cargo')">
+                    <div class="qs-icon-box">
+                        <svg class="qs-svg-icon" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Crane Base & Mast (Navy) -->
+                            <line x1="14" y1="42" x2="34" y2="42" stroke="#071B3A" stroke-width="2.2"
+                                stroke-linecap="round" />
+                            <path d="M18 42L22 14H27L31 42" stroke="#071B3A" stroke-width="2" stroke-linecap="round" />
+                            <line x1="20" y1="32" x2="29" y2="32" stroke="#071B3A" stroke-width="1.5" />
+                            <line x1="21" y1="22" x2="28" y2="22" stroke="#071B3A" stroke-width="1.5" />
+                            <!-- Jib Boom (Navy) -->
+                            <line x1="12" y1="14" x2="43" y2="14" stroke="#071B3A" stroke-width="2.2"
+                                stroke-linecap="round" />
+                            <path d="M22 14L27 8L31 14" stroke="#071B3A" stroke-width="1.8" />
+                            <!-- Cable & Container Cargo (Gold) -->
+                            <line x1="39" y1="14" x2="39" y2="26" stroke="#D89025" stroke-width="1.8" />
+                            <rect x="33" y="26" width="12" height="10" rx="1.5" stroke="#D89025" stroke-width="2"
+                                fill="#FFFBF5" />
+                            <line x1="37" y1="26" x2="37" y2="36" stroke="#D89025" stroke-width="1.4" />
+                            <line x1="41" y1="26" x2="41" y2="36" stroke="#D89025" stroke-width="1.4" />
+                        </svg>
                     </div>
+                    <span class="qs-title">Project Cargo</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4.5. ABOUT US SECTION (1:1 Exact Match with Reference Design) -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <!-- Left Images Collage -->
+                <div class="about-images-layout">
+                    <div class="about-left-col">
+                        <!-- Top Sm Image (Plane) -->
+                        <div class="about-img-box about-img-sm">
+                            <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=400&q=80"
+                                alt="Air Cargo Plane">
+                        </div>
+                        <!-- Bottom Sm Image (Warehouse shelves) -->
+                        <div class="about-img-box about-img-sm">
+                            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=400&q=80"
+                                alt="Logistics Warehouse Shelving">
+                        </div>
+                    </div>
+                    <!-- Right Tall Image (Truck at sunset) -->
+                    <div class="about-img-box about-img-lg">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=400&q=80"
+                            alt="Freight Transport Truck at Sunset">
+                    </div>
+                </div>
+
+                <!-- Right About Content -->
+                <div class="about-content-col">
+                    <span class="section-tag">ABOUT US</span>
+                    <h2>Your Trusted Partner in Global Logistics</h2>
+                    <p>Joy Trading is a global export &amp; import company committed to delivering reliable, efficient,
+                        and cost-effective logistics and trading solutions across the world.</p>
+
+                    <div class="about-features-list">
+                        <!-- Feature 1 -->
+                        <div class="about-feature-item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" stroke="#D89025" stroke-width="1.8" />
+                                <path d="M6 10L9 13L14 7" stroke="#D89025" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Customer First Approach</span>
+                        </div>
+                        <!-- Feature 2 -->
+                        <div class="about-feature-item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" stroke="#D89025" stroke-width="1.8" />
+                                <path d="M6 10L9 13L14 7" stroke="#D89025" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Innovative &amp; Cost-effective Solutions</span>
+                        </div>
+                        <!-- Feature 3 -->
+                        <div class="about-feature-item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" stroke="#D89025" stroke-width="1.8" />
+                                <path d="M6 10L9 13L14 7" stroke="#D89025" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Safe &amp; Reliable Deliveries</span>
+                        </div>
+                        <!-- Feature 4 -->
+                        <div class="about-feature-item">
+                            <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="10" cy="10" r="9" stroke="#D89025" stroke-width="1.8" />
+                                <path d="M6 10L9 13L14 7" stroke="#D89025" stroke-width="1.8" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                            <span>Sustainable &amp; Responsible Logistics</span>
+                        </div>
+                    </div>
+
+                    <a href="#contact" class="btn-learn-about">
+                        Learn More About Us <i class="fa-solid fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </div>
@@ -180,9 +425,10 @@
                 <div class="services-intro-card">
                     <span class="section-tag">OUR SERVICES</span>
                     <h2>Comprehensive Logistics Solutions For Your Business</h2>
-                    <p>From freight forwarding to final delivery, we provide tailored logistics services that meet your unique business needs with speed, safety and reliability.</p>
+                    <p>From freight forwarding to final delivery, we provide tailored logistics services that meet your
+                        unique business needs with speed, safety and reliability.</p>
                     <div>
-                        <a href="#quote" onclick="openQuoteModal()" class="btn btn-navy">
+                        <a href="#quote" onclick="openQuoteModal()" class="btn-explore-services">
                             Explore All Services <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -205,7 +451,8 @@
                 <!-- Service 2: Air Freight -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80" alt="Air Freight Plane on Runway">
+                        <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80"
+                            alt="Air Freight Plane on Runway">
                     </div>
                     <div class="service-card-body">
                         <h3>Air Freight</h3>
@@ -219,7 +466,8 @@
                 <!-- Service 3: Road Transport -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="White Road Logistics Truck">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80"
+                            alt="White Road Logistics Truck">
                     </div>
                     <div class="service-card-body">
                         <h3>Road Transport</h3>
@@ -233,12 +481,14 @@
                 <!-- Service 4: Warehousing & Distribution -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Modern Warehousing Aisles and Distribution">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80"
+                            alt="Modern Warehousing Aisles and Distribution">
                     </div>
                     <div class="service-card-body">
                         <h3>Warehousing & Distribution</h3>
                         <p>Modern warehousing and distribution solutions to optimize your supply chain.</p>
-                        <a href="javascript:void(0)" onclick="openQuoteModal('Warehousing & Distribution')" class="learn-more-link">
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Warehousing & Distribution')"
+                            class="learn-more-link">
                             Learn More <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -247,12 +497,14 @@
                 <!-- Service 5: Customs Clearance -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Customs Inspection and Trade Compliance">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80"
+                            alt="Customs Inspection and Trade Compliance">
                     </div>
                     <div class="service-card-body">
                         <h3>Customs Clearance</h3>
                         <p>Smooth and hassle-free customs clearance across the globe.</p>
-                        <a href="javascript:void(0)" onclick="openQuoteModal('Customs Clearance')" class="learn-more-link">
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Customs Clearance')"
+                            class="learn-more-link">
                             Learn More <i class="fa-solid fa-arrow-right"></i>
                         </a>
                     </div>
@@ -261,7 +513,8 @@
                 <!-- Service 6: Project Cargo -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80" alt="Heavy Cargo Crane Container Handling">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80"
+                            alt="Heavy Cargo Crane Container Handling">
                     </div>
                     <div class="service-card-body">
                         <h3>Project Cargo</h3>
@@ -275,7 +528,8 @@
                 <!-- Service 7: Real-Time Tracking -->
                 <div class="service-card">
                     <div class="service-card-img-box">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Real Time Shipment Tracking on Tablet Screen">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80"
+                            alt="Real Time Shipment Tracking on Tablet Screen">
                     </div>
                     <div class="service-card-body">
                         <h3>Real-Time Tracking</h3>
@@ -289,33 +543,79 @@
         </div>
     </section>
 
-    <!-- 6. DARK COUNTER / STATS BAR -->
+    <!-- 6. DARK COUNTER / STATS BAR (1:1 Exact Match with Reference Design) -->
     <section class="stats-section">
         <div class="container">
             <div class="stats-grid">
+                <!-- Stat 1: 15+ Years -->
                 <div class="stat-item">
-                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="stat-icon">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="18" r="14" stroke="#D89025" stroke-width="1.8" />
+                            <circle cx="22" cy="18" r="9" stroke="#D89025" stroke-width="1.4" />
+                            <circle cx="22" cy="18" r="4" stroke="#FFFFFF" stroke-width="1.4" fill="#D89025" />
+                            <path d="M16 28L13 38L22 34L31 38L28 28" stroke="#D89025" stroke-width="1.8"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
                     <div>
                         <div class="stat-number">15+</div>
                         <div class="stat-label">Years of Experience</div>
                     </div>
                 </div>
+
+                <!-- Stat 2: 2,500+ Happy Clients -->
                 <div class="stat-item">
-                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-icon">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="16" stroke="#D89025" stroke-width="1.8"
+                                stroke-dasharray="2.5 2" />
+                            <circle cx="22" cy="16" r="4.5" stroke="#FFFFFF" stroke-width="1.6" fill="#FFFFFF" />
+                            <path d="M14 29C14 24.5 17.5 23 22 23C26.5 23 30 24.5 30 29" stroke="#FFFFFF"
+                                stroke-width="1.8" stroke-linecap="round" />
+                            <circle cx="12" cy="15" r="2.5" fill="#D89025" />
+                            <circle cx="32" cy="15" r="2.5" fill="#D89025" />
+                            <path d="M14 17L18 20M30 17L26 20" stroke="#D89025" stroke-width="1.2" />
+                        </svg>
+                    </div>
                     <div>
                         <div class="stat-number">2,500+</div>
                         <div class="stat-label">Happy Clients</div>
                     </div>
                 </div>
+
+                <!-- Stat 3: 12,000+ Shipments Delivered -->
                 <div class="stat-item">
-                    <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="stat-icon">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 26L12 34C14 36 30 36 32 34L36 26H8Z" stroke="#D89025" stroke-width="1.8"
+                                stroke-linejoin="round" />
+                            <rect x="14" y="14" width="7" height="6" rx="0.8" stroke="#FFFFFF" stroke-width="1.4"
+                                fill="#D89025" />
+                            <rect x="23" y="14" width="7" height="6" rx="0.8" stroke="#FFFFFF" stroke-width="1.4"
+                                fill="#D89025" />
+                            <rect x="18.5" y="8" width="7" height="6" rx="0.8" stroke="#FFFFFF" stroke-width="1.4"
+                                fill="#D89025" />
+                            <path d="M6 38C10 36.5 14 36.5 18 38C22 39.5 26 39.5 30 38C34 36.5 38 36.5 40 38"
+                                stroke="#D89025" stroke-width="1.8" stroke-linecap="round" />
+                        </svg>
+                    </div>
                     <div>
                         <div class="stat-number">12,000+</div>
                         <div class="stat-label">Shipments Delivered</div>
                     </div>
                 </div>
+
+                <!-- Stat 4: 100+ Countries Covered -->
                 <div class="stat-item">
-                    <div class="stat-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <div class="stat-icon">
+                        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="22" cy="22" r="16" stroke="#D89025" stroke-width="1.8" />
+                            <ellipse cx="22" cy="22" rx="7" ry="16" stroke="#FFFFFF" stroke-width="1.4" />
+                            <line x1="6" y1="22" x2="38" y2="22" stroke="#FFFFFF" stroke-width="1.4" />
+                            <path d="M10 14H34M10 30H34" stroke="#D89025" stroke-width="1.4" />
+                        </svg>
+                    </div>
                     <div>
                         <div class="stat-number">100+</div>
                         <div class="stat-label">Countries Covered</div>
@@ -325,69 +625,411 @@
         </div>
     </section>
 
-    <!-- 7. WHY CHOOSE US -->
+    <!-- 7. WHY CHOOSE US (1:1 Exact Match with Reference Design) -->
     <section class="why-choose-section" id="about">
         <div class="container">
             <div class="why-header">
                 <span class="section-tag">WHY CHOOSE US</span>
                 <h2>We Deliver More Than Just Cargo</h2>
             </div>
-            
+
             <div class="why-grid">
+                <!-- Feature 1: Reliable & Secure -->
                 <div class="why-item">
-                    <div class="why-icon-circle">
-                        <i class="fa-solid fa-shield-halved"></i>
+                    <div class="why-icon-box">
+                        <svg class="why-icon-svg" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="23" stroke="#071B3A" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="0" />
+                            <circle cx="27" cy="27" r="23" stroke="#D89025" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="72" />
+                            <path d="M27 14L18 18V26C18 32.5 21.8 38 27 39.5C32.2 38 36 32.5 36 26V18L27 14Z"
+                                stroke="#D89025" stroke-width="1.8" stroke-linejoin="round" />
+                            <path d="M23 26C23 28 24.8 30 27 30.5C29.2 30 31 28 31 26" stroke="#071B3A"
+                                stroke-width="1.5" stroke-linecap="round" />
+                            <path d="M24 23.5L26.5 26L30.5 21.5" stroke="#071B3A" stroke-width="1.8"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
-                    <h3>Reliable & Secure</h3>
-                    <p>We ensure the safety and security of your cargo at every step.</p>
+                    <div class="why-text-box">
+                        <h3>Reliable & Secure</h3>
+                        <p>We ensure the safety and security of your cargo at every step.</p>
+                    </div>
                 </div>
+
+                <!-- Feature 2: On-Time Delivery -->
                 <div class="why-item">
-                    <div class="why-icon-circle">
-                        <i class="fa-solid fa-stopwatch"></i>
+                    <div class="why-icon-box">
+                        <svg class="why-icon-svg" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="23" stroke="#071B3A" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="0" />
+                            <circle cx="27" cy="27" r="23" stroke="#D89025" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="72" />
+                            <circle cx="27" cy="28" r="12" stroke="#D89025" stroke-width="1.8" />
+                            <path d="M24 12H30M27 12V16" stroke="#071B3A" stroke-width="1.8" stroke-linecap="round" />
+                            <path d="M27 21V28L32 30.5" stroke="#071B3A" stroke-width="1.8" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <circle cx="17" cy="18" r="1.3" fill="#D89025" />
+                            <circle cx="37" cy="18" r="1.3" fill="#D89025" />
+                        </svg>
                     </div>
-                    <h3>On-Time Delivery</h3>
-                    <p>Punctuality is our promise. Your time, our priority.</p>
+                    <div class="why-text-box">
+                        <h3>On-Time Delivery</h3>
+                        <p>Punctuality is our promise. Your time, our priority.</p>
+                    </div>
                 </div>
+
+                <!-- Feature 3: Global Network -->
                 <div class="why-item">
-                    <div class="why-icon-circle">
-                        <i class="fa-solid fa-network-wired"></i>
+                    <div class="why-icon-box">
+                        <svg class="why-icon-svg" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="23" stroke="#071B3A" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="0" />
+                            <circle cx="27" cy="27" r="23" stroke="#D89025" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="72" />
+                            <circle cx="27" cy="27" r="13" stroke="#071B3A" stroke-width="1.8" />
+                            <ellipse cx="27" cy="27" rx="5.5" ry="13" stroke="#D89025" stroke-width="1.5" />
+                            <line x1="14" y1="27" x2="40" y2="27" stroke="#D89025" stroke-width="1.5" />
+                            <path d="M17 21H37M17 33H37" stroke="#071B3A" stroke-width="1.3" />
+                        </svg>
                     </div>
-                    <h3>Global Network</h3>
-                    <p>A strong worldwide network that connects your business to the world.</p>
+                    <div class="why-text-box">
+                        <h3>Global Network</h3>
+                        <p>A strong worldwide network that connects your business to the world.</p>
+                    </div>
                 </div>
+
+                <!-- Feature 4: 24/7 Support -->
                 <div class="why-item">
-                    <div class="why-icon-circle">
-                        <i class="fa-solid fa-headset"></i>
+                    <div class="why-icon-box">
+                        <svg class="why-icon-svg" viewBox="0 0 54 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="27" cy="27" r="23" stroke="#071B3A" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="0" />
+                            <circle cx="27" cy="27" r="23" stroke="#D89025" stroke-width="2" stroke-dasharray="72 72"
+                                stroke-dashoffset="72" />
+                            <path
+                                d="M18 27C18 22 22 18 27 18C32 18 36 22 36 27V31C36 32.7 34.7 34 33 34H32V26H35V27C35 22.6 31.4 19 27 19C22.6 19 19 22.6 19 27V26H22V34H21C19.3 34 18 32.7 18 31V27Z"
+                                fill="#071B3A" />
+                            <path d="M32 34V37C32 38 31 39 30 39H27" stroke="#D89025" stroke-width="1.8"
+                                stroke-linecap="round" />
+                            <circle cx="26" cy="39" r="1.3" fill="#D89025" />
+                        </svg>
                     </div>
-                    <h3>24/7 Support</h3>
-                    <p>Our expert team is available round the clock to assist you anytime.</p>
+                    <div class="why-text-box">
+                        <h3>24/7 Support</h3>
+                        <p>Our expert team is available round the clock to assist you anytime.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 8. TRUSTED BY GLOBAL COMPANIES -->
+    <!-- 8.5. HOW IT WORKS (OUR PROCESS) -->
+    <section class="process-section" id="solutions">
+        <div class="container">
+            <div class="process-header">
+                <span class="section-tag">OUR PROCESS</span>
+                <h2>How It Works — Simple &amp; Streamlined</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-num-box">
+                        <span class="step-num">01</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <h3>Consultation &amp; Booking</h3>
+                    <p>Request a customized quote online. Our experts help you pick the right shipping mode and prepare
+                        all export-import documents.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num-box">
+                        <span class="step-num">02</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <h3>Secure Pickup &amp; Compliant Packing</h3>
+                    <p>We safely collect your cargo from the warehouse or origin point and package it using
+                        industry-grade, compliant materials.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num-box">
+                        <span class="step-num">03</span>
+                        <div class="step-line"></div>
+                    </div>
+                    <h3>Customs Clearance &amp; Transit</h3>
+                    <p>Our licensed brokers handle customs documentation, declarations, and fast clearance, launching
+                        transit via sea, air, or land.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-num-box">
+                        <span class="step-num">04</span>
+                    </div>
+                    <h3>Doorstep Delivery</h3>
+                    <p>Using our extensive regional networks, we perform last-mile transport to deliver the cargo safely
+                        to the consignee's address.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8.6. INTERNATIONAL PROJECTS -->
+    <section class="projects-section" id="projects">
+        <div class="container">
+            <div class="projects-header">
+                <span class="section-tag">INTERNATIONAL PROJECTS</span>
+                <h2>Global Reach, Local Expertise</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=600&q=80"
+                            alt="Port of Hamburg">
+                        <div class="project-overlay">
+                            <span class="project-category">Ocean Freight</span>
+                            <h3>Port of Hamburg Expansion</h3>
+                            <a href="javascript:void(0)" class="project-link"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80"
+                            alt="Dubai Air Cargo">
+                        <div class="project-overlay">
+                            <span class="project-category">Air Cargo</span>
+                            <h3>Dubai Hub Operations</h3>
+                            <a href="javascript:void(0)" class="project-link"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="project-card">
+                    <div class="project-img-box">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80"
+                            alt="Cross-border Transport">
+                        <div class="project-overlay">
+                            <span class="project-category">Road Transport</span>
+                            <h3>Europe Cross-Border</h3>
+                            <a href="javascript:void(0)" class="project-link"><i
+                                    class="fa-solid fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projects-footer" style="text-align: center; margin-top: 40px;">
+                <a href="#quote" onclick="openQuoteModal()" class="btn-explore-services">
+                    Start Your Project <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8.7. CLIENT TESTIMONIALS -->
+    <section class="testimonials-section" id="resources">
+        <div class="container">
+            <div class="testimonials-header">
+                <span class="section-tag">TESTIMONIALS</span>
+                <h2>What Our Global Partners Say</h2>
+            </div>
+            <div class="testimonials-slider-wrapper">
+                <div class="testimonials-slider-track">
+                    <!-- Original Set -->
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Joy Trading has transformed our supply chain operations. Their ocean
+                            freight
+                            transit times are highly reliable, and their customs clearance team handles complex
+                            regulations
+                            effortlessly."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">AM</div>
+                            <div>
+                                <h4>Amit Mehta</h4>
+                                <span>Director, Mehta Exports Ltd.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Outstanding service! Their air cargo solutions saved our urgent delivery
+                            deadline last month. The real-time container tracking dashboard gave us complete peace of
+                            mind."
+                        </p>
+                        <div class="testi-author">
+                            <div class="author-avatar">SL</div>
+                            <div>
+                                <h4>Sarah Larsen</h4>
+                                <span>Logistics Manager, Nordic Goods Group</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"We have partnered with Joy Trading for our multi-country logistics for
+                            over 5
+                            years. Their 24/7 support team is always responsive, helping us resolve transit issues
+                            instantly."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">RK</div>
+                            <div>
+                                <h4>Rajesh Kumar</h4>
+                                <span>Supply Chain VP, Global Tech Industries</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Duplicate Set for Continuous Scrolling -->
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Joy Trading has transformed our supply chain operations. Their ocean
+                            freight
+                            transit times are highly reliable, and their customs clearance team handles complex
+                            regulations
+                            effortlessly."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">AM</div>
+                            <div>
+                                <h4>Amit Mehta</h4>
+                                <span>Director, Mehta Exports Ltd.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"Outstanding service! Their air cargo solutions saved our urgent delivery
+                            deadline last month. The real-time container tracking dashboard gave us complete peace of
+                            mind."
+                        </p>
+                        <div class="testi-author">
+                            <div class="author-avatar">SL</div>
+                            <div>
+                                <h4>Sarah Larsen</h4>
+                                <span>Logistics Manager, Nordic Goods Group</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testi-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testi-text">"We have partnered with Joy Trading for our multi-country logistics for
+                            over 5
+                            years. Their 24/7 support team is always responsive, helping us resolve transit issues
+                            instantly."</p>
+                        <div class="testi-author">
+                            <div class="author-avatar">RK</div>
+                            <div>
+                                <h4>Rajesh Kumar</h4>
+                                <span>Supply Chain VP, Global Tech Industries</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TRUSTED BY GLOBAL COMPANIES (1:1 Exact Match with Reference Design) -->
     <section class="trusted-section">
         <div class="container">
-            <div class="trusted-title">TRUSTED BY GLOBAL COMPANIES</div>
+            <span class="trusted-title">TRUSTED BY GLOBAL COMPANIES</span>
             <div class="trusted-logos-grid">
-                <div class="partner-logo partner-maersk">
-                    <i class="fa-solid fa-star-of-life"></i> MAERSK
+                <!-- 1. MAERSK -->
+                <div class="partner-brand-box">
+                    <svg height="30" viewBox="0 0 160 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="36" height="36" rx="3" fill="#42B0D5" />
+                        <path
+                            d="M18 5.5L20.8 13.5L28.8 11.5L24 18L29.5 23.5L22 24.2L20 31.5L16.5 24.5L9 24.5L14 18.5L9.5 12L17.5 13.5L18 5.5Z"
+                            fill="#FFFFFF" />
+                        <text x="46" y="26" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900"
+                            font-size="20" fill="#0C2340" letter-spacing="1.5">MAERSK</text>
+                    </svg>
                 </div>
-                <div class="partner-logo partner-dhl">
-                    DHL
+
+                <!-- 2. DHL -->
+                <div class="partner-brand-box">
+                    <svg height="28" viewBox="0 0 130 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="5" y="27" font-family="Arial, Helvetica, sans-serif" font-style="italic"
+                            font-weight="900" font-size="32" fill="#D40511" letter-spacing="-1">DHL</text>
+                        <line x1="68" y1="13" x2="125" y2="13" stroke="#D40511" stroke-width="2.5" />
+                        <line x1="72" y1="19" x2="125" y2="19" stroke="#D40511" stroke-width="2.5" />
+                        <line x1="76" y1="25" x2="125" y2="25" stroke="#D40511" stroke-width="2.5" />
+                    </svg>
                 </div>
-                <div class="partner-logo partner-fedex">
-                    Fed<span>Ex</span>
+
+                <!-- 3. FedEx Express -->
+                <div class="partner-brand-box">
+                    <svg height="30" viewBox="0 0 120 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="23" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900"
+                            font-size="28" fill="#4D148C" letter-spacing="-1">Fed<tspan fill="#FF6600">Ex</tspan></text>
+                        <text x="44" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700"
+                            font-size="8" fill="#FF6600" letter-spacing="0.5">Express</text>
+                    </svg>
                 </div>
-                <div class="partner-logo partner-hapag">
-                    <i class="fa-solid fa-anchor"></i> Hapag-Lloyd
+
+                <!-- 4. Hapag-Lloyd -->
+                <div class="partner-brand-box">
+                    <svg height="28" viewBox="0 0 165 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4 10L14 18L4 26H9L19 18L9 10H4Z" fill="#002444" />
+                        <path d="M14 10L24 18L14 26H19L29 18L19 10H14Z" fill="#002444" />
+                        <text x="36" y="24" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800"
+                            font-size="17" fill="#002444" letter-spacing="0.4">Hapag-Lloyd</text>
+                    </svg>
                 </div>
-                <div class="partner-logo partner-msc">
-                    msc
+
+                <!-- 5. MSC -->
+                <div class="partner-brand-box">
+                    <svg height="32" viewBox="0 0 105 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="2" y="29" font-family="'Times New Roman', Georgia, serif" font-weight="900"
+                            font-size="34" fill="#0F172A" letter-spacing="-1.5">msc</text>
+                        <path d="M68 15C74 11 82 13 86 19C82 23 72 25 66 21C64 19 66 16 68 15Z" fill="#D89025" />
+                        <circle cx="76" cy="17" r="1.8" fill="#0F172A" />
+                    </svg>
                 </div>
-                <div class="partner-logo partner-one">
-                    ONE
+
+                <!-- 6. ONE (Ocean Network Express) -->
+                <div class="partner-brand-box">
+                    <svg height="30" viewBox="0 0 130 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <text x="0" y="23" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900"
+                            font-size="28" fill="#E4007F" letter-spacing="1">ONE</text>
+                        <text x="0" y="32" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700"
+                            font-size="6.5" fill="#E4007F" letter-spacing="0.5">OCEAN NETWORK EXPRESS</text>
+                    </svg>
                 </div>
             </div>
         </div>
@@ -401,14 +1043,18 @@
                     <h2>Let's Move Your Business Forward</h2>
                     <p>Get a customized logistics solution that fits your business needs.</p>
                 </div>
-                
+
                 <div class="cta-quote-box" onclick="openQuoteModal()">
                     <div class="quote-box-text">
                         <h3>Request a Quote Today</h3>
                         <p>We'll respond within 24 hours!</p>
                     </div>
                     <div class="quote-circle-btn">
-                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="11" cy="11" r="9" stroke="#FFFFFF" stroke-width="1.2" stroke-dasharray="2 2" />
+                            <path d="M8 14L14 8M14 8H9.5M14 8V12.5" stroke="#FFFFFF" stroke-width="1.6"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
                     </div>
                 </div>
             </div>
@@ -422,13 +1068,14 @@
                 <!-- Col 1: About -->
                 <div class="footer-about">
                     <a href="index.html" class="brand-logo">
-                        <div class="logo-symbol"></div>
+                        <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
                         <div class="logo-text-group">
                             <span class="logo-title">JOY <span>TRADING</span></span>
-                            <span class="logo-subtitle">GLOBAL EXPORT & IMPORT</span>
+                            <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
                         </div>
                     </a>
-                    <p>Providing world-class logistics and supply chain solutions with a focus on reliability, transparency and excellence.</p>
+                    <p>Providing world-class logistics and supply chain solutions with a focus on reliability,
+                        transparency and excellence.</p>
                     <div class="social-icons">
                         <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
@@ -513,36 +1160,59 @@
 
     <!-- MODAL: REQUEST A QUOTE -->
     <div class="modal-overlay" id="quoteModal">
-        <div class="modal-box">
+        <div class="modal-box modal-lg">
             <button class="modal-close" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
-            <h3>Request a Free Quote</h3>
-            <p>Fill out the details below and our logistics specialist will contact you within 24 hours.</p>
-            <form onsubmit="handleQuoteSubmit(event)">
-                <div class="form-group">
-                    <label>Your Name</label>
-                    <input type="text" class="form-control" placeholder="John Doe" required>
+            
+            <div class="modal-split">
+                <!-- Left: Branding / Image -->
+                <div class="modal-split-left">
+                    <div class="modal-left-content">
+                        <h2>Global Logistics,<br><span>Simplified.</span></h2>
+                        <p>Get highly competitive pricing for your supply chain requirements.</p>
+                        <ul class="modal-features">
+                            <li><i class="fa-solid fa-check-circle"></i> Transparent Pricing</li>
+                            <li><i class="fa-solid fa-check-circle"></i> 24/7 Expert Support</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Fast Customs Clearance</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label>Email Address</label>
-                    <input type="email" class="form-control" placeholder="john@example.com" required>
+
+                <!-- Right: Form -->
+                <div class="modal-split-right">
+                    <h3>Request a Quote</h3>
+                    <p class="modal-desc">Fill out the details below and our specialists will contact you.</p>
+                    <form onsubmit="handleQuoteSubmit(event)" class="premium-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Service Required</label>
+                            <select class="form-control" id="quoteServiceSelect">
+                                <option value="Ocean Freight">Ocean Freight</option>
+                                <option value="Air Freight">Air Freight</option>
+                                <option value="Road Transport">Road Transport</option>
+                                <option value="Warehousing & Distribution">Warehousing & Distribution</option>
+                                <option value="Customs Clearance">Customs Clearance</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Shipment Origin & Destination</label>
+                            <input type="text" class="form-control" placeholder="e.g. Mumbai to Dubai" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-orange btn-full">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
                 </div>
-                <div class="form-group">
-                    <label>Service Required</label>
-                    <select class="form-control" id="quoteServiceSelect">
-                        <option value="Ocean Freight">Ocean Freight</option>
-                        <option value="Air Freight">Air Freight</option>
-                        <option value="Road Transport">Road Transport</option>
-                        <option value="Warehousing & Distribution">Warehousing & Distribution</option>
-                        <option value="Customs Clearance">Customs Clearance</option>
-                        <option value="Project Cargo">Project Cargo</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Shipment Origin & Destination</label>
-                    <input type="text" class="form-control" placeholder="e.g. Mumbai to Dubai" required>
-                </div>
-                <button type="submit" class="btn btn-orange" style="width: 100%; margin-top: 10px;">Submit Quote Request</button>
-            </form>
+            </div>
         </div>
     </div>
 
@@ -555,13 +1225,17 @@
             <form onsubmit="handleTrackSubmit(event)">
                 <div class="form-group">
                     <label>Tracking / Waybill / Container Number</label>
-                    <input type="text" id="trackingInput" class="form-control" placeholder="e.g. JOY-892410-IN" required>
+                    <input type="text" id="trackingInput" class="form-control" placeholder="e.g. JOY-892410-IN"
+                        required>
                 </div>
-                <button type="submit" class="btn btn-navy" style="width: 100%; margin-top: 10px;">Track Live Status</button>
+                <button type="submit" class="btn btn-navy" style="width: 100%; margin-top: 10px;">Track Live
+                    Status</button>
             </form>
-            <div id="trackingResult" style="display: none; margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid var(--accent-orange);">
+            <div id="trackingResult"
+                style="display: none; margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid var(--accent-orange);">
                 <strong style="color: var(--primary-navy);">Status: IN TRANSIT</strong>
-                <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">Vessel Joy Voyager • ETA: 2 Days • Current Location: Arabian Sea</p>
+                <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">Vessel Joy Voyager • ETA: 2
+                    Days • Current Location: Arabian Sea</p>
             </div>
         </div>
     </div>
@@ -569,9 +1243,9 @@
     <!-- JAVASCRIPT -->
     <script>
         function openQuoteModal(serviceName) {
-            if(serviceName) {
+            if (serviceName) {
                 const select = document.getElementById('quoteServiceSelect');
-                if(select) select.value = serviceName;
+                if (select) select.value = serviceName;
             }
             document.getElementById('quoteModal').classList.add('active');
         }
@@ -616,7 +1290,7 @@
         }
 
         // Close modal when clicking outside
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             document.querySelectorAll('.modal-overlay').forEach(modal => {
                 if (event.target === modal) {
                     modal.classList.remove('active');
@@ -625,4 +1299,5 @@
         }
     </script>
 </body>
+
 </html>
