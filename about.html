@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — Joy Trading | Global Export & Import</title>
+    <meta name="description"
+        content="Learn about Joy Trading, a global export & import company delivering reliable logistics solutions across the world.">
+
+    <!-- Google Fonts: Premium Typography Suite -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href=".vscode/asstes/imges/logo.png">
+
+    <!-- External Project Stylesheet -->
+    <link rel="stylesheet" href=".vscode/asstes/css/style.css">
+</head>
+
+<body>
+
+    <!-- 1. TOPBAR -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-left">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <span>123 Logistics Way, Mumbai, India 400001</span>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@joytrading.com">info@joytrading.com</a>
+                </div>
+                <div class="topbar-item">
+                    <a href="javascript:void(0)" onclick="openTrackingModal()" class="track-link">
+                        <i class="fa-solid fa-crosshairs"></i> Track Shipment
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. NAVBAR -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <!-- Brand Logo -->
+                <a href="index.html" class="brand-logo">
+                    <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
+                    <div class="logo-text-group">
+                        <span class="logo-title">JOY <span>TRADING</span></span>
+                        <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
+                    </div>
+                </a>
+
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="index.html#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link active">About Us</a></li>
+                    <li class="nav-item">
+                        <a href="index.html#services" class="nav-link">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#solutions" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#projects" class="nav-link">Projects <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.html#resources" class="nav-link">Resources <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item"><a href="index.html#contact" class="nav-link">Contact Us</a></li>
+                </ul>
+
+                <!-- CTA Button -->
+                <div class="nav-actions">
+                    <button onclick="openQuoteModal()" class="btn-get-quote">Get a Quote</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileNav()"><i
+                            class="fa-solid fa-bars"></i></button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ABOUT HERO SECTION -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="about-hero-content">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> <i class="fa-solid fa-chevron-right"></i> <span class="active">About Us</span>
+                </div>
+                <div class="about-hero-text">
+                    <span class="section-tag" style="margin-bottom: 25px;">ABOUT JOY TRADING</span>
+                    <h1>Logistics Solutions<br><span>That Connect Worlds</span></h1>
+                    <p>Joy Trading is a global export & import company delivering reliable, efficient, and cost-effective logistics and trading solutions across the world. We connect businesses, markets, and people through seamless logistics and a commitment to quality.</p>
+                    <div class="about-hero-btns">
+                        <a href="javascript:void(0)" class="btn btn-navy">Our Services <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                        <a href="javascript:void(0)" class="btn btn-outline" style="margin-left: 15px;">Contact Us <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS BAR -->
+    <section class="about-stats-bar">
+        <div class="container">
+            <div class="stats-bar-grid">
+                <div class="stats-bar-item">
+                    <i class="fa-solid fa-globe"></i>
+                    <div class="stats-bar-text">
+                        <h3>50+</h3>
+                        <p>Countries Served</p>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fa-solid fa-box-open"></i>
+                    <div class="stats-bar-text">
+                        <h3>1000+</h3>
+                        <p>Successful Shipments</p>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fa-solid fa-users"></i>
+                    <div class="stats-bar-text">
+                        <h3>500+</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="stats-bar-item">
+                    <i class="fa-solid fa-award"></i>
+                    <div class="stats-bar-text">
+                        <h3>15+</h3>
+                        <p>Years of Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION -->
+    <section class="core-values-section">
+        <div class="container">
+            <div class="core-values-grid">
+                <div class="core-value-card">
+                    <div class="cv-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h3>Integrity</h3>
+                    <p>We conduct our business with honesty, transparency, and ethical standards.</p>
+                </div>
+                <div class="core-value-card">
+                    <div class="cv-icon"><i class="fa-solid fa-handshake-angle"></i></div>
+                    <h3>Reliability</h3>
+                    <p>We deliver on our promises with consistency and dependability.</p>
+                </div>
+                <div class="core-value-card">
+                    <div class="cv-icon"><i class="fa-regular fa-lightbulb"></i></div>
+                    <h3>Innovation</h3>
+                    <p>We embrace innovation to create better solutions for our clients.</p>
+                </div>
+                <div class="core-value-card">
+                    <div class="cv-icon"><i class="fa-brands fa-envira"></i></div>
+                    <h3>Sustainability</h3>
+                    <p>We are committed to sustainable practices for a better future.</p>
+                </div>
+                <div class="core-value-card">
+                    <div class="cv-icon"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <h3>Customer Focus</h3>
+                    <p>Our customers are at the heart of everything we do.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MISSION & GLOBAL NETWORK SECTION -->
+    <section class="mission-network-section">
+        <div class="container">
+            <div class="mission-network-grid">
+                <!-- Left: Mission & Vision -->
+                <div class="mission-left">
+                    <span class="section-tag" style="margin-bottom: 30px;">OUR MISSION & VISION</span>
+                    
+                    <div class="mission-card">
+                        <div class="mc-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <div class="mc-text">
+                            <h3>Our Mission</h3>
+                            <p>To build long-term relationships by providing superior logistics solutions with transparency, reliability, and a commitment to excellence.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mission-card">
+                        <div class="mc-icon"><i class="fa-regular fa-eye"></i></div>
+                        <div class="mc-text">
+                            <h3>Our Vision</h3>
+                            <p>To be a globally recognized logistics partner, connecting the world through innovative solutions and unmatched service.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Global Network -->
+                <div class="network-right">
+                    <span class="section-tag" style="margin-bottom: 25px;">OUR GLOBAL NETWORK</span>
+                    <p class="network-desc">With a strong worldwide network of partners and agents, we ensure your cargo reaches any destination, anywhere, anytime.</p>
+                    <a href="javascript:void(0)" class="btn btn-navy" style="margin-bottom: 35px; display: inline-flex; width: auto;">Explore Our Network <i class="fa-solid fa-arrow-right" style="margin-left: 8px;"></i></a>
+                    
+                    <div class="network-stats-grid">
+                        <div class="net-stat-card">
+                            <div class="ns-icon"><i class="fa-solid fa-location-dot"></i></div>
+                            <div class="ns-text">
+                                <h4>20+</h4>
+                                <p>Global Offices</p>
+                            </div>
+                        </div>
+                        <div class="net-stat-card">
+                            <div class="ns-icon"><i class="fa-solid fa-users-line"></i></div>
+                            <div class="ns-text">
+                                <h4>200+</h4>
+                                <p>Partner Agents</p>
+                            </div>
+                        </div>
+                        <div class="net-stat-card">
+                            <div class="ns-icon"><i class="fa-solid fa-ship"></i></div>
+                            <div class="ns-text">
+                                <h4>All Major Ports</h4>
+                                <p>Worldwide</p>
+                            </div>
+                        </div>
+                        <div class="net-stat-card">
+                            <div class="ns-icon"><i class="fa-solid fa-plane-departure"></i></div>
+                            <div class="ns-text">
+                                <h4>All Major Airports</h4>
+                                <p>Worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact" style="margin-top: 60px;">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
+                        <div class="logo-text-group">
+                            <span class="logo-title">JOY <span>TRADING</span></span>
+                            <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
+                        </div>
+                    </a>
+                    <p>Providing world-class logistics and supply chain solutions with a focus on reliability, transparency and excellence.</p>
+                    <div class="social-icons">
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Services -->
+                <div class="footer-column">
+                    <h4>SERVICES</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)">Ocean Freight</a></li>
+                        <li><a href="javascript:void(0)">Air Freight</a></li>
+                        <li><a href="javascript:void(0)">Road Transport</a></li>
+                        <li><a href="javascript:void(0)">Warehousing & Distribution</a></li>
+                        <li><a href="javascript:void(0)">Customs Clearance</a></li>
+                        <li><a href="javascript:void(0)">Project Cargo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Solutions -->
+                <div class="footer-column">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="javascript:void(0)">Freight Forwarding</a></li>
+                        <li><a href="javascript:void(0)">Door-to-Door Delivery</a></li>
+                        <li><a href="javascript:void(0)">Trade Compliance</a></li>
+                        <li><a href="javascript:void(0)">eCommerce Logistics</a></li>
+                        <li><a href="javascript:void(0)">Cold Chain Logistics</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: Company -->
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="javascript:void(0)">Careers</a></li>
+                        <li><a href="javascript:void(0)">Our Network</a></li>
+                        <li><a href="javascript:void(0)">News & Media</a></li>
+                        <li><a href="javascript:void(0)">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Contact Us -->
+                <div class="footer-column">
+                    <h4>CONTACT US</h4>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <i class="fa-solid fa-location-dot"></i>
+                            <span>123 Logistics Way,<br>Mumbai, India 400001</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li>
+                            <i class="fa-solid fa-envelope"></i>
+                            <span>info@joytrading.com</span>
+                        </li>
+                        <li>
+                            <i class="fa-regular fa-clock"></i>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Joy Trading. All Rights Reserved.</p>
+                <div class="footer-legal">
+                    <a href="javascript:void(0)">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL: REQUEST A QUOTE -->
+    <div class="modal-overlay" id="quoteModal">
+        <div class="modal-box modal-lg">
+            <button class="modal-close" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            
+            <div class="modal-split">
+                <!-- Left: Branding / Image -->
+                <div class="modal-split-left">
+                    <div class="modal-left-content">
+                        <h2>Global Logistics,<br><span>Simplified.</span></h2>
+                        <p>Get highly competitive pricing for your supply chain requirements.</p>
+                        <ul class="modal-features">
+                            <li><i class="fa-solid fa-check-circle"></i> Transparent Pricing</li>
+                            <li><i class="fa-solid fa-check-circle"></i> 24/7 Expert Support</li>
+                            <li><i class="fa-solid fa-check-circle"></i> Fast Customs Clearance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="modal-split-right">
+                    <h3>Request a Quote</h3>
+                    <p class="modal-desc">Fill out the details below and our specialists will contact you.</p>
+                    <form onsubmit="handleQuoteSubmit(event)" class="premium-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Your Name</label>
+                                <input type="text" class="form-control" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email Address</label>
+                                <input type="email" class="form-control" placeholder="john@company.com" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Service Required</label>
+                            <select class="form-control" id="quoteServiceSelect">
+                                <option value="Ocean Freight">Ocean Freight</option>
+                                <option value="Air Freight">Air Freight</option>
+                                <option value="Road Transport">Road Transport</option>
+                                <option value="Warehousing & Distribution">Warehousing & Distribution</option>
+                                <option value="Customs Clearance">Customs Clearance</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>Shipment Origin & Destination</label>
+                            <input type="text" class="form-control" placeholder="e.g. Mumbai to Dubai" required>
+                        </div>
+
+                        <button type="submit" class="btn btn-orange btn-full">Submit Request <i class="fa-solid fa-arrow-right"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL: TRACK SHIPMENT -->
+    <div class="modal-overlay" id="trackModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Track Your Shipment</h3>
+            <p>Enter your Bill of Lading (B/L) or Tracking Number to get live container status.</p>
+            <form onsubmit="handleTrackSubmit(event)">
+                <div class="form-group">
+                    <label>Tracking / Waybill / Container Number</label>
+                    <input type="text" id="trackingInput" class="form-control" placeholder="e.g. JOY-892410-IN"
+                        required>
+                </div>
+                <button type="submit" class="btn btn-navy" style="width: 100%; margin-top: 10px;">Track Live
+                    Status</button>
+            </form>
+            <div id="trackingResult"
+                style="display: none; margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid var(--accent-orange);">
+                <strong style="color: var(--primary-navy);">Status: IN TRANSIT</strong>
+                <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">Vessel Joy Voyager • ETA: 2
+                    Days • Current Location: Arabian Sea</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        function openQuoteModal(serviceName) {
+            if (serviceName) {
+                const select = document.getElementById('quoteServiceSelect');
+                if (select) select.value = serviceName;
+            }
+            document.getElementById('quoteModal').classList.add('active');
+        }
+
+        function openTrackingModal() {
+            document.getElementById('trackModal').classList.add('active');
+        }
+
+        function closeModals() {
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.classList.remove('active');
+            });
+        }
+
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Your quote request has been received. Our logistics team will contact you within 24 hours.');
+            closeModals();
+        }
+
+        function handleTrackSubmit(e) {
+            e.preventDefault();
+            const resultBox = document.getElementById('trackingResult');
+            resultBox.style.display = 'block';
+        }
+
+        function toggleMobileNav() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = '#ffffff';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+            }
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
