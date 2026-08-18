@@ -19,13 +19,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href=".vscode/asstes/imges/logo.png">
+    <link rel="icon" type="image/png" href=".vscode/asstes/imges/image.png">
 
     <!-- External Project Stylesheet -->
     <link rel="stylesheet" href=".vscode/asstes/css/style.css">
 </head>
 
 <body>
+    <!-- Mobile Nav Backdrop -->
+    <div class="mobile-nav-backdrop" id="mobileBackdrop" onclick="closeMobileNav()"></div>
 
     <!-- 1. TOPBAR -->
     <div class="topbar">
@@ -60,29 +62,17 @@
             <nav class="navbar">
                 <!-- Brand Logo -->
                 <a href="index.html" class="brand-logo">
-                    <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
-                    <div class="logo-text-group">
-                        <span class="logo-title">JOY <span>TRADING</span></span>
-                        <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
-                    </div>
+                    <img src=".vscode/asstes/imges/image.png" alt="Joy Trading — Global Export & Import" class="brand-logo-full">
                 </a>
 
                 <!-- Navigation Links -->
                 <ul class="nav-links">
                     <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
                     <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item">
-                        <a href="#services" class="nav-link">Services <i class="fa-solid fa-chevron-down"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#solutions" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#projects" class="nav-link">Projects <i class="fa-solid fa-chevron-down"></i></a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#resources" class="nav-link">Resources <i class="fa-solid fa-chevron-down"></i></a>
-                    </li>
+                    <li class="nav-item"><a href="#services" class="nav-link">Services</a></li>
+                    <li class="nav-item"><a href="#solutions" class="nav-link">Solutions</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#resources" class="nav-link">Resources</a></li>
                     <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
                 </ul>
 
@@ -1068,11 +1058,7 @@
                 <!-- Col 1: About -->
                 <div class="footer-about">
                     <a href="index.html" class="brand-logo">
-                        <img src=".vscode/asstes/imges/logo.png" alt="Joy Trading Logo" class="brand-logo-img">
-                        <div class="logo-text-group">
-                            <span class="logo-title">JOY <span>TRADING</span></span>
-                            <span class="logo-subtitle">— GLOBAL EXPORT & IMPORT —</span>
-                        </div>
+                        <img src=".vscode/asstes/imges/image.png" alt="Joy Trading — Global Export & Import" class="brand-logo-full brand-logo-full--footer">
                     </a>
                     <p>Providing world-class logistics and supply chain solutions with a focus on reliability,
                         transparency and excellence.</p>
@@ -1274,20 +1260,42 @@
 
         function toggleMobileNav() {
             const nav = document.querySelector('.nav-links');
-            if (nav.style.display === 'flex') {
-                nav.style.display = 'none';
+            const btn = document.querySelector('.mobile-menu-btn');
+            const backdrop = document.getElementById('mobileBackdrop');
+            const icon = btn.querySelector('i');
+
+            if (nav.classList.contains('mobile-open')) {
+                closeMobileNav();
             } else {
-                nav.style.display = 'flex';
-                nav.style.flexDirection = 'column';
-                nav.style.position = 'absolute';
-                nav.style.top = '70px';
-                nav.style.left = '0';
-                nav.style.width = '100%';
-                nav.style.background = '#ffffff';
-                nav.style.padding = '20px';
-                nav.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
+                nav.classList.add('mobile-open');
+                btn.classList.add('is-open');
+                backdrop.classList.add('active');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-xmark');
+                document.body.style.overflow = 'hidden';
             }
         }
+
+        function closeMobileNav() {
+            const nav = document.querySelector('.nav-links');
+            const btn = document.querySelector('.mobile-menu-btn');
+            const backdrop = document.getElementById('mobileBackdrop');
+            const icon = btn.querySelector('i');
+
+            nav.classList.remove('mobile-open');
+            btn.classList.remove('is-open');
+            backdrop.classList.remove('active');
+            icon.classList.remove('fa-xmark');
+            icon.classList.add('fa-bars');
+            document.body.style.overflow = '';
+        }
+
+        // Close nav when a link is clicked
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth <= 768) closeMobileNav();
+            });
+        });
 
         // Close modal when clicking outside
         window.onclick = function (event) {
