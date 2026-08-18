@@ -3,1128 +3,624 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joy Trading — Smart Global Logistics & Export/Import Solutions</title>
-    <meta name="description" content="Joy Trading delivers end-to-end logistics solutions — ocean freight, air cargo, land transport, warehousing and customs clearance across the globe.">
-    <link rel="stylesheet" href="css/font.awesome.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/swiper-bundle.min.css">
-    <link href="css/cargo-theme.css" rel="stylesheet" type="text/css">
-    <link href="css/preloader.css" rel="stylesheet" type="text/css">
-    <style>
-        /* ============================
-           PREMIERE LAYOUT — JOY TRADING
-           ============================ */
+    <title>Joy Trading — Global Export & Import | Logistics Solutions</title>
+    <meta name="description" content="Joy Trading delivers end-to-end logistics solutions — ocean freight, air cargo, road transport, warehousing and customs clearance across the globe.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-        /* TOP BAR */
-        .premiere-topbar {
-            background: #0a1628;
-            color: rgba(255,255,255,0.75);
-            font-size: 13px;
-            padding: 9px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.06);
-        }
-        .premiere-topbar .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 8px;
-        }
-        .ptb-left, .ptb-right {
-            display: flex;
-            align-items: center;
-            gap: 18px;
-        }
-        .ptb-item {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            font-size: 12.5px;
-        }
-        .ptb-item i { color: #F47A00; font-size: 12px; }
-        .ptb-item a { color: rgba(255,255,255,0.75); }
-        .ptb-item a:hover { color: #F47A00; }
-        .ptb-divider { width: 1px; height: 13px; background: rgba(255,255,255,0.15); }
-        .ptb-track-link {
-            background: #F47A00;
-            color: #fff !important;
-            font-size: 11.5px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
-            padding: 5px 16px;
-            border-radius: 2px;
-            transition: background 0.3s;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .ptb-track-link:hover { background: #c05e00; color: #fff !important; }
-
-        /* STICKY HEADER */
-        .premiere-header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 999;
-            background: #fff;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.08);
-            padding: 0;
-        }
-        /* Offset body content so it doesn't hide under fixed header */
-        body { padding-top: 72px; }
-        /* When topbar is visible, header sits below it */
-        .has-topbar body { padding-top: 108px; }
-        .premiere-header .header-grid {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 14px 0;
-        }
-        .ph-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-        }
-        .ph-logo-img {
-            width: 44px;
-            height: 44px;
-            object-fit: contain;
-            border-radius: 6px;
-        }
-        .ph-logo-text { line-height: 1.2; }
-        .ph-logo-name {
-            font-size: 1.15rem;
-            font-weight: 800;
-            font-family: 'Inter', sans-serif;
-            letter-spacing: -0.02em;
-            color: #0f172a;
-            display: block;
-        }
-        .ph-logo-name span { color: #F47A00; }
-        .ph-logo-sub {
-            font-size: 10px;
-            color: #64748b;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            font-weight: 600;
-            display: block;
-        }
-
-        /* Desktop Nav */
-        .ph-nav { display: flex; align-items: center; }
-        .ph-nav > ul {
-            display: flex;
-            gap: 0;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-        }
-        .ph-nav > ul > li { position: relative; }
-        .ph-nav > ul > li > a {
-            display: block;
-            padding: 8px 15px;
-            font-size: 13.5px;
-            font-weight: 600;
-            color: #1e293b;
-            transition: color 0.2s;
-            white-space: nowrap;
-        }
-        .ph-nav > ul > li > a:hover,
-        .ph-nav > ul > li.active > a { color: #1B3A6B; }
-        .ph-nav > ul > li.has-child > a::after {
-            content: "\f107";
-            font-family: "FontAwesome";
-            font-size: 11px;
-            margin-left: 4px;
-        }
-        .ph-nav > ul > li > ul {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            min-width: 210px;
-            background: #fff;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
-            border-top: 3px solid #1B3A6B;
-            list-style: none;
-            padding: 8px 0;
-            margin: 0;
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(8px);
-            transition: all 0.25s ease;
-            z-index: 9999;
-        }
-        .ph-nav > ul > li:hover > ul {
-            opacity: 1;
-            visibility: visible;
-            transform: translateY(0);
-        }
-        .ph-nav > ul > li > ul li a {
-            display: block;
-            padding: 9px 20px;
-            font-size: 13.5px;
-            font-weight: 500;
-            color: #334155;
-            transition: all 0.2s;
-        }
-        .ph-nav > ul > li > ul li a:hover {
-            color: #1B3A6B;
-            padding-left: 26px;
-            background: #f8fafc;
-        }
-        .ph-cta { display: flex; align-items: center; gap: 14px; }
-        .ph-btn-quote {
-            background: #1B3A6B;
-            color: #fff !important;
-            padding: 11px 26px;
-            border-radius: 4px;
-            font-size: 13.5px;
-            font-weight: 700;
-            transition: background 0.3s, transform 0.2s;
-            white-space: nowrap;
-            display: inline-block;
-        }
-        .ph-btn-quote:hover { background: #0d2044; color: #fff !important; transform: translateY(-1px); }
-        .ph-hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 6px;
-        }
-        .ph-hamburger span {
-            display: block; width: 24px; height: 2px;
-            background: #1e293b; border-radius: 2px; transition: all 0.3s;
-        }
-
-        /* HERO */
-        .premiere-hero {
-            position: relative;
-            min-height: 600px;
-            background: linear-gradient(110deg, #0d1f3c 0%, #1B3A6B 55%, #0f2647 100%);
-            overflow: hidden;
-            display: flex;
-            align-items: center;
-        }
-        .premiere-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
-        }
-        .premiere-hero .container {
-            position: relative;
-            z-index: 2;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            gap: 40px;
-            padding-top: 70px;
-            padding-bottom: 70px;
-        }
-        .ph-hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            color: #F47A00;
-            font-size: 13px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.12em;
-            margin-bottom: 20px;
-        }
-        .ph-hero-badge::before {
-            content: '';
-            display: block;
-            width: 30px;
-            height: 2px;
-            background: #F47A00;
-        }
-        .ph-hero-title {
-            font-size: clamp(2.4rem, 5vw, 3.6rem);
-            font-weight: 800;
-            color: #fff;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
-            margin-bottom: 22px;
-        }
-        .ph-hero-title span { color: #F47A00; }
-        .ph-hero-desc {
-            color: rgba(255,255,255,0.72);
-            font-size: 1rem;
-            line-height: 1.75;
-            max-width: 480px;
-            margin-bottom: 34px;
-        }
-        .ph-hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 44px; }
-        .ph-btn-primary {
-            background: #F47A00;
-            color: #fff !important;
-            padding: 14px 30px;
-            border-radius: 4px;
-            font-size: 14px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-            box-shadow: 0 8px 24px rgba(244,122,0,0.35);
-        }
-        .ph-btn-primary:hover { background: #c05e00; color: #fff !important; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(244,122,0,0.45); }
-        .ph-btn-outline {
-            background: transparent;
-            color: #fff !important;
-            padding: 13px 28px;
-            border-radius: 4px;
-            border: 2px solid rgba(255,255,255,0.35);
-            font-size: 14px;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.3s;
-        }
-        .ph-btn-outline:hover { border-color: #fff; background: rgba(255,255,255,0.08); color: #fff !important; }
-        .ph-hero-feats { display: flex; gap: 30px; }
-        .ph-hero-feat {
-            display: flex; align-items: center; gap: 8px;
-            color: rgba(255,255,255,0.75); font-size: 13.5px;
-        }
-        .ph-hero-feat i { color: #F47A00; font-size: 15px; }
-        .ph-hero-right {
-            position: relative;
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-        }
-        .ph-hero-truck-wrap {
-            position: relative;
-            width: 100%;
-            max-width: 560px;
-        }
-        .ph-hero-truck-wrap img {
-            width: 100%;
-            border-radius: 6px;
-            display: block;
-            filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5));
-        }
-        .ph-hero-float-badge {
-            position: absolute;
-            bottom: 24px;
-            left: -24px;
-            background: #fff;
-            border-radius: 8px;
-            padding: 14px 18px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            min-width: 180px;
-            animation: float-badge 3s ease-in-out infinite;
-        }
-        @keyframes float-badge {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-6px); }
-        }
-        .ph-float-icon {
-            width: 44px; height: 44px;
-            background: #1B3A6B;
-            border-radius: 8px;
-            display: flex; align-items: center; justify-content: center;
-            color: #fff; font-size: 18px; flex-shrink: 0;
-        }
-        .ph-float-text strong { display: block; font-size: 18px; font-weight: 800; color: #0f172a; line-height: 1; }
-        .ph-float-text span { font-size: 11.5px; color: #64748b; font-weight: 500; }
-
-        /* SERVICES STRIP */
-        .premiere-services-strip { background: #fff; padding: 42px 0; border-bottom: 1px solid #e2e8f0; }
-        .pss-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
-        .pss-item {
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-            padding: 22px 16px;
-            border-right: 1px solid #e2e8f0;
-            transition: all 0.3s;
-            cursor: pointer; text-decoration: none !important;
-        }
-        .pss-item:last-child { border-right: none; }
-        .pss-item:hover { background: #f8faff; }
-        .pss-item:hover .pss-icon { background: #1B3A6B; color: #fff; }
-        .pss-icon {
-            width: 60px; height: 60px;
-            background: #EEF3FF;
-            border-radius: 12px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 26px; color: #1B3A6B;
-            margin-bottom: 14px; transition: all 0.3s;
-        }
-        .pss-label {
-            font-size: 13.5px; font-weight: 700; color: #1e293b;
-            margin-bottom: 6px; line-height: 1.3;
-            font-family: 'Inter', sans-serif;
-        }
-        .pss-link-text {
-            font-size: 12px; color: #F47A00; font-weight: 600;
-            display: flex; align-items: center; gap: 4px; transition: gap 0.2s;
-        }
-        .pss-item:hover .pss-link-text { gap: 8px; }
-
-        /* ABOUT SECTION */
-        .premiere-about { padding: 90px 0; background: #f8fafc; }
-        .premiere-about .container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 70px; align-items: center;
-        }
-        .pa-images {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: auto auto;
-            gap: 12px;
-            position: relative;
-        }
-        .pa-img-main {
-            grid-row: 1 / 3;
-            grid-column: 1;
-            height: 380px;
-            position: relative;
-        }
-        .pa-img-main img {
-            width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block;
-        }
-        .pa-img-sm { height: 182px; }
-        .pa-img-sm img { width: 100%; height: 100%; object-fit: cover; border-radius: 6px; display: block; }
-        .pa-badge-pill {
-            position: absolute;
-            bottom: -18px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #F47A00;
-            color: #fff;
-            border-radius: 6px;
-            padding: 12px 20px;
-            text-align: center;
-            white-space: nowrap;
-            box-shadow: 0 8px 24px rgba(244,122,0,0.4);
-            z-index: 10;
-        }
-        .pa-badge-pill strong { display: block; font-size: 22px; font-weight: 800; line-height: 1; }
-        .pa-badge-pill span { font-size: 11px; font-weight: 600; letter-spacing: 0.04em; opacity: 0.9; }
-        .pa-eyebrow {
-            color: #F47A00; font-size: 12.5px; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 0.12em;
-            margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
-        }
-        .pa-eyebrow::before { content: ''; display: block; width: 32px; height: 2px; background: #F47A00; }
-        .pa-title {
-            font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 800;
-            color: #0f172a; line-height: 1.2; margin-bottom: 20px; letter-spacing: -0.03em;
-        }
-        .pa-desc { color: #64748b; font-size: 15px; line-height: 1.8; margin-bottom: 28px; }
-        .pa-check-list { list-style: none; padding: 0; margin: 0 0 32px; }
-        .pa-check-list li {
-            display: flex; align-items: flex-start; gap: 10px;
-            padding: 9px 0; font-size: 14.5px; color: #334155; font-weight: 500;
-            border-bottom: 1px solid #e2e8f0;
-        }
-        .pa-check-list li:last-child { border-bottom: none; }
-        .pa-check-list li i { color: #F47A00; margin-top: 3px; font-size: 13px; flex-shrink: 0; }
-        .pa-discover-btn {
-            display: inline-flex; align-items: center; gap: 10px;
-            background: #1B3A6B; color: #fff !important;
-            padding: 14px 32px; border-radius: 4px; font-size: 14px; font-weight: 700;
-            transition: all 0.3s; box-shadow: 0 6px 20px rgba(27,58,107,0.25);
-        }
-        .pa-discover-btn:hover { background: #0d2044; color: #fff !important; transform: translateY(-2px); box-shadow: 0 12px 30px rgba(27,58,107,0.35); }
-        .pa-discover-btn i { transition: transform 0.2s; }
-        .pa-discover-btn:hover i { transform: translateX(4px); }
-
-        /* STATS ROW */
-        .premiere-stats { background: #1B3A6B; padding: 54px 0; }
-        .ps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
-        .ps-item {
-            display: flex; flex-direction: column; align-items: center; text-align: center;
-            padding: 10px 20px; border-right: 1px solid rgba(255,255,255,0.12);
-        }
-        .ps-item:last-child { border-right: none; }
-        .ps-icon {
-            width: 50px; height: 50px;
-            background: rgba(255,255,255,0.1); border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 20px; color: #F47A00; margin-bottom: 14px;
-        }
-        .ps-number { font-size: 2.6rem; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 6px; font-family: 'Inter', sans-serif; }
-        .ps-label { font-size: 13px; color: rgba(255,255,255,0.65); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
-
-        /* WHY CHOOSE US */
-        .premiere-why { padding: 90px 0; background: #fff; }
-        .pw-header { text-align: center; margin-bottom: 56px; }
-        .pw-eyebrow { color: #F47A00; font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px; display: inline-block; }
-        .pw-title { font-size: clamp(1.9rem, 3.5vw, 2.8rem); font-weight: 800; color: #0f172a; letter-spacing: -0.03em; margin-bottom: 0; }
-        .pw-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
-        .pw-card {
-            background: #f8fafc; border-radius: 8px; padding: 34px 26px;
-            transition: all 0.35s; border: 1px solid #e2e8f0;
-            position: relative; overflow: hidden;
-        }
-        .pw-card::after {
-            content: ''; position: absolute; bottom: 0; left: 0; right: 0;
-            height: 3px; background: #1B3A6B; transform: scaleX(0); transition: transform 0.35s;
-        }
-        .pw-card:hover { box-shadow: 0 20px 50px rgba(27,58,107,0.12); transform: translateY(-4px); border-color: transparent; }
-        .pw-card:hover::after { transform: scaleX(1); }
-        .pw-card-icon {
-            width: 56px; height: 56px; background: #EEF3FF; border-radius: 10px;
-            display: flex; align-items: center; justify-content: center;
-            font-size: 22px; color: #1B3A6B; margin-bottom: 18px; transition: all 0.3s;
-        }
-        .pw-card:hover .pw-card-icon { background: #1B3A6B; color: #fff; }
-        .pw-card-title { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 10px; font-family: 'Inter', sans-serif; }
-        .pw-card-desc { font-size: 13.5px; color: #64748b; line-height: 1.7; margin-bottom: 0; }
-
-        /* TRUSTED LOGOS */
-        .premiere-trusted { padding: 52px 0; background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0; }
-        .pt-eyebrow { text-align: center; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #94a3b8; margin-bottom: 30px; }
-        .pt-logos { display: flex; align-items: center; justify-content: center; gap: 50px; flex-wrap: wrap; }
-        .pt-logo-item {
-            font-family: 'Inter', sans-serif; font-weight: 900; font-size: 1.1rem;
-            color: #94a3b8; letter-spacing: -0.03em; transition: color 0.3s;
-            text-transform: uppercase; user-select: none;
-        }
-        .pt-logo-item:hover { color: #1B3A6B; }
-        .pt-logo-item.dhl { color: #cc0000; }
-        .pt-logo-item.dhl:hover { color: #990000; }
-
-        /* NEWSLETTER */
-        .premiere-newsletter {
-            padding: 80px 0;
-            background: linear-gradient(120deg, #0d1f3c 0%, #1B3A6B 100%);
-            position: relative; overflow: hidden;
-        }
-        .premiere-newsletter::before {
-            content: ''; position: absolute; right: -80px; top: -80px;
-            width: 380px; height: 380px; border-radius: 50%;
-            background: rgba(255,255,255,0.03);
-        }
-        .premiere-newsletter::after {
-            content: ''; position: absolute; left: -60px; bottom: -60px;
-            width: 280px; height: 280px; border-radius: 50%;
-            background: rgba(255,255,255,0.03);
-        }
-        .pn-inner { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 60px; }
-        .pn-eyebrow { color: #F47A00; font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
-        .pn-eyebrow::before { content: ''; display: block; width: 28px; height: 2px; background: #F47A00; }
-        .pn-title { font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 800; color: #fff; line-height: 1.2; letter-spacing: -0.03em; margin-bottom: 12px; }
-        .pn-desc { color: rgba(255,255,255,0.65); font-size: 14.5px; line-height: 1.7; margin-bottom: 0; }
-        .pn-form { display: flex; gap: 0; }
-        .pn-input {
-            flex: 1; padding: 16px 20px; border: none; border-radius: 4px 0 0 4px;
-            font-size: 14px; outline: none; background: rgba(255,255,255,0.12);
-            color: #fff; backdrop-filter: blur(8px);
-        }
-        .pn-input::placeholder { color: rgba(255,255,255,0.5); }
-        .pn-submit {
-            background: #F47A00; color: #fff; border: none;
-            padding: 16px 28px; border-radius: 0 4px 4px 0;
-            font-size: 14px; font-weight: 700; cursor: pointer; transition: background 0.3s; white-space: nowrap;
-        }
-        .pn-submit:hover { background: #c05e00; }
-
-        /* FOOTER */
-        .premiere-footer { background: #060f1e; padding: 72px 0 0; }
-        .pf-grid { display: grid; grid-template-columns: 1.6fr 1fr 1fr 1.4fr; gap: 50px; padding-bottom: 52px; border-bottom: 1px solid rgba(255,255,255,0.07); }
-        .pf-brand { display: flex; align-items: center; gap: 10px; margin-bottom: 18px; text-decoration: none; }
-        .pf-brand-img { width: 40px; height: 40px; object-fit: contain; border-radius: 6px; }
-        .pf-brand-name { font-size: 1.1rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; font-family: 'Inter', sans-serif; }
-        .pf-brand-name span { color: #F47A00; }
-        .pf-desc { color: rgba(255,255,255,0.5); font-size: 13.5px; line-height: 1.75; margin-bottom: 22px; }
-        .pf-social { display: flex; gap: 10px; }
-        .pf-social-icon {
-            width: 34px; height: 34px; background: rgba(255,255,255,0.07); border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            color: rgba(255,255,255,0.6); font-size: 13px; transition: all 0.3s;
-        }
-        .pf-social-icon:hover { background: #F47A00; color: #fff; transform: translateY(-2px); }
-        .pf-col-title {
-            font-size: 14.5px; font-weight: 700; color: #fff; margin-bottom: 22px;
-            font-family: 'Inter', sans-serif; position: relative; padding-bottom: 12px;
-        }
-        .pf-col-title::after { content: ''; position: absolute; bottom: 0; left: 0; width: 32px; height: 2px; background: #F47A00; }
-        .pf-links { list-style: none; padding: 0; margin: 0; }
-        .pf-links li { padding: 7px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
-        .pf-links li:last-child { border-bottom: none; }
-        .pf-links li a {
-            color: rgba(255,255,255,0.55); font-size: 13.5px; transition: all 0.2s;
-            display: flex; align-items: center; gap: 7px;
-        }
-        .pf-links li a::before { content: '\f105'; font-family: 'FontAwesome'; font-size: 11px; color: #F47A00; }
-        .pf-links li a:hover { color: #fff; padding-left: 4px; }
-        .pf-contact-list { list-style: none; padding: 0; margin: 0; }
-        .pf-contact-list li {
-            display: flex; gap: 12px; padding: 8px 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: rgba(255,255,255,0.55); font-size: 13.5px; line-height: 1.6;
-        }
-        .pf-contact-list li:last-child { border-bottom: none; }
-        .pf-contact-list li i { color: #F47A00; font-size: 14px; margin-top: 2px; flex-shrink: 0; }
-        .pf-bottom {
-            padding: 22px 0; display: flex; justify-content: space-between;
-            align-items: center; flex-wrap: wrap; gap: 12px;
-        }
-        .pf-bottom p { color: rgba(255,255,255,0.35); font-size: 13px; margin: 0; }
-        .pf-bottom-links { display: flex; gap: 20px; }
-        .pf-bottom-links a { color: rgba(255,255,255,0.35); font-size: 13px; transition: color 0.2s; }
-        .pf-bottom-links a:hover { color: #F47A00; }
-
-        /* MOBILE NAV */
-        .mobile-nav-overlay {
-            position: fixed; inset: 0; background: rgba(0,0,0,0.5);
-            z-index: 9998; opacity: 0; visibility: hidden; transition: all 0.3s;
-        }
-        .mobile-nav-overlay.open { opacity: 1; visibility: visible; }
-        .mobile-nav-drawer {
-            position: fixed; top: 0; right: -320px; width: 300px;
-            height: 100%; background: #fff; z-index: 9999;
-            padding: 30px 24px; overflow-y: auto;
-            transition: right 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .mobile-nav-drawer.open { right: 0; }
-        .mobile-nav-close {
-            position: absolute; top: 16px; right: 16px;
-            background: none; border: none; font-size: 20px; color: #334155; cursor: pointer;
-        }
-        .mobile-nav-links { margin-top: 50px; list-style: none; padding: 0; }
-        .mobile-nav-links li { border-bottom: 1px solid #f1f5f9; }
-        .mobile-nav-links li a { display: block; padding: 14px 0; font-size: 15px; font-weight: 600; color: #1e293b; }
-        .mobile-nav-links li ul { list-style: none; padding: 0 0 0 16px; display: none; }
-        .mobile-nav-links li ul li a { font-size: 14px; font-weight: 500; color: #64748b; padding: 10px 0; }
-
-        /* SCROLL TO TOP */
-        .scroll-top-btn {
-            position: fixed; right: 28px; bottom: 28px;
-            width: 44px; height: 44px; background: #1B3A6B; border-radius: 50%;
-            display: flex; align-items: center; justify-content: center;
-            cursor: pointer; opacity: 0; transition: all 0.3s; z-index: 998;
-            color: #fff; font-size: 16px; box-shadow: 0 4px 16px rgba(27,58,107,0.4);
-        }
-        .scroll-top-btn.active { opacity: 1; }
-        .scroll-top-btn:hover { background: #0d2044; transform: translateY(-2px); }
-
-        /* RESPONSIVE */
-        @media (max-width: 1024px) {
-            .ph-nav, .ph-cta .ph-btn-quote { display: none; }
-            .ph-hamburger { display: flex; }
-            .premiere-hero .container { grid-template-columns: 1fr; text-align: center; }
-            .ph-hero-right { display: none; }
-            .ph-hero-desc { max-width: 100%; }
-            .premiere-about .container { grid-template-columns: 1fr; gap: 40px; }
-            .pn-inner { grid-template-columns: 1fr; gap: 30px; }
-            .pf-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
-            .ps-grid { grid-template-columns: repeat(2, 1fr); }
-            .pw-grid { grid-template-columns: repeat(2, 1fr); }
-            .pss-grid { grid-template-columns: repeat(3, 1fr); }
-        }
-        @media (max-width: 640px) {
-            .pss-grid { grid-template-columns: repeat(2, 1fr); }
-            .ps-grid { grid-template-columns: 1fr 1fr; }
-            .pw-grid { grid-template-columns: 1fr; }
-            .pf-grid { grid-template-columns: 1fr; gap: 28px; }
-            .pt-logos { gap: 24px; }
-            .premiere-topbar { display: none; }
-            .ph-hero-feats { flex-direction: column; gap: 10px; }
-            .pn-form { flex-direction: column; }
-            .pn-input { border-radius: 4px; }
-            .pn-submit { border-radius: 4px; }
-        }
-    </style>
+    <!-- External Project Stylesheet -->
+    <link rel="stylesheet" href=".vscode/asstes/css/style.css">
 </head>
-
 <body>
-    <!-- Preloader -->
-    <div id="preloader">
-        <div class="loader-content">
-            <div class="loader-logo-wrap">
-                <img src="images/ChatGPT Image Aug 17, 2026, 10_58_40 AM.png" alt="Joy Trading" class="brand-logo-icon-img">
-                <div class="brand-name"><span class="brand-joy">JOY</span> <span class="brand-trading">TRADING</span></div>
-            </div>
-            <div class="loader-progress-wrap">
-                <div class="loader-progress-bar"></div>
-            </div>
-        </div>
-    </div>
 
-    <!-- TOP BAR -->
-    <div class="premiere-topbar">
-        <div class="container">
-            <div class="ptb-left">
-                <div class="ptb-item">
+    <!-- 1. TOPBAR -->
+    <div class="topbar">
+        <div class="container topbar-content">
+            <div class="topbar-left">
+                <div class="topbar-item">
                     <i class="fa-solid fa-location-dot"></i>
-                    <span>N-Heights, Gachibowli, Hyderabad – 500081, India</span>
-                </div>
-                <div class="ptb-divider"></div>
-                <div class="ptb-item">
-                    <i class="fa-solid fa-phone"></i>
-                    <a href="tel:+919985764875">+91 99857 64875</a>
-                </div>
-                <div class="ptb-divider"></div>
-                <div class="ptb-item">
-                    <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:info@joytrading.co">info@joytrading.co</a>
+                    <span>123 Logistics Way, Mumbai, India 400001</span>
                 </div>
             </div>
-            <div class="ptb-right">
-                <a href="tracking.html" class="ptb-track-link" id="topbarTrackBtn">
-                    <i class="fa-solid fa-satellite-dish"></i> Track Shipment
-                </a>
+            <div class="topbar-right">
+                <div class="topbar-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="tel:+919876543210">+91 98765 43210</a>
+                </div>
+                <div class="topbar-item">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="mailto:info@joytrading.com">info@joytrading.com</a>
+                </div>
+                <div class="topbar-item">
+                    <a href="javascript:void(0)" onclick="openTrackingModal()" class="track-link">
+                        <i class="fa-solid fa-crosshairs"></i> Track Shipment
+                    </a>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- MAIN HEADER -->
-    <header class="premiere-header" id="mainHeader">
+    <!-- 2. NAVBAR -->
+    <header>
         <div class="container">
-            <div class="header-grid">
-                <a href="index.html" class="ph-logo" id="headerLogo">
-                    <img src="images/ChatGPT Image Aug 17, 2026, 10_58_40 AM.png" alt="Joy Trading Logo" class="ph-logo-img">
-                    <div class="ph-logo-text">
-                        <span class="ph-logo-name">JOY <span>TRADING</span></span>
-                        <span class="ph-logo-sub">Global Export &amp; Import</span>
+            <nav class="navbar">
+                <!-- Brand Logo -->
+                <a href="index.html" class="brand-logo">
+                    <div class="logo-symbol"></div>
+                    <div class="logo-text-group">
+                        <span class="logo-title">JOY <span>TRADING</span></span>
+                        <span class="logo-subtitle">GLOBAL EXPORT & IMPORT</span>
                     </div>
                 </a>
 
-                <nav class="ph-nav" aria-label="Main navigation">
-                    <ul>
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li class="has-child">
-                            <a href="services.html">Services</a>
-                            <ul>
-                                <li><a href="service-details.html">Ocean Freight</a></li>
-                                <li><a href="service-details-air.html">Air Cargo</a></li>
-                                <li><a href="service-details-land.html">Land Transport</a></li>
-                                <li><a href="service-details-warehousing.html">Warehousing</a></li>
-                                <li><a href="service-details-customs.html">Customs Clearance</a></li>
-                            </ul>
-                        </li>
-                        <li class="has-child">
-                            <a href="#">Company</a>
-                            <ul>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="our-fleet.html">Our Fleet</a></li>
-                                <li><a href="team.html">Team</a></li>
-                                <li><a href="careers.html">Careers</a></li>
-                                <li><a href="faq.html">FAQ</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="tracking.html">Tracking</a></li>
-                        <li class="has-child">
-                            <a href="blog.html">News</a>
-                            <ul>
-                                <li><a href="blog.html">Blog</a></li>
-                                <li><a href="blog-details.html">Blog Details</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </nav>
+                <!-- Navigation Links -->
+                <ul class="nav-links">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About Us</a></li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#solutions" class="nav-link">Solutions <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#industries" class="nav-link">Industries <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#resources" class="nav-link">Resources <i class="fa-solid fa-chevron-down"></i></a>
+                    </li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact Us</a></li>
+                </ul>
 
-                <div class="ph-cta">
-                    <a href="get-quote.html" class="ph-btn-quote" id="headerQuoteBtn">Get a Quote</a>
-                    <div class="ph-hamburger" id="mobileMenuToggle" aria-label="Open mobile menu" role="button" tabindex="0">
-                        <span></span><span></span><span></span>
-                    </div>
+                <!-- CTA Button -->
+                <div class="nav-actions">
+                    <button onclick="openQuoteModal()" class="btn btn-navy">Get a Quote</button>
+                    <button class="mobile-menu-btn" onclick="toggleMobileNav()"><i class="fa-solid fa-bars"></i></button>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
 
-    <!-- Mobile Nav -->
-    <div class="mobile-nav-overlay" id="mobileOverlay" role="presentation"></div>
-    <div class="mobile-nav-drawer" id="mobileDrawer" role="dialog" aria-label="Mobile navigation">
-        <button class="mobile-nav-close" id="mobileClose" aria-label="Close menu">
-            <i class="fa-solid fa-xmark"></i>
-        </button>
-        <a href="index.html" class="ph-logo" style="margin-bottom:10px; display:flex;">
-            <img src="images/ChatGPT Image Aug 17, 2026, 10_58_40 AM.png" alt="Joy Trading" class="ph-logo-img">
-            <div class="ph-logo-text">
-                <span class="ph-logo-name">JOY <span>TRADING</span></span>
-                <span class="ph-logo-sub">Global Export &amp; Import</span>
-            </div>
-        </a>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="tracking.html">Tracking</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-        <a href="get-quote.html" class="ph-btn-primary" style="margin-top:24px; width:100%; justify-content:center;">
-            Get a Quote <i class="fa-solid fa-arrow-right"></i>
-        </a>
-    </div>
-
-    <!-- HERO SECTION -->
-    <section class="premiere-hero" id="home">
+    <!-- 3. HERO SECTION (Full Panoramic Background) -->
+    <section class="hero-section" id="home">
         <div class="container">
-            <div class="ph-hero-left">
-                <div class="ph-hero-badge">Connecting The World, Delivering Trust</div>
-                <h1 class="ph-hero-title">
-                    Smart Logistics<br>
-                    For A <span>Global Future</span>
-                </h1>
-                <p class="ph-hero-desc">We provide tailored logistics solutions to help your business move faster, smarter and further. From ocean freight to air cargo, we handle every mile.</p>
-                <div class="ph-hero-btns">
-                    <a href="services.html" class="ph-btn-primary" id="heroServicesBtn">
-                        Our Services <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a href="get-quote.html" class="ph-btn-outline" id="heroQuoteBtn">
-                        Request a Quote
-                    </a>
-                </div>
-                <div class="ph-hero-feats">
-                    <div class="ph-hero-feat"><i class="fa-solid fa-bolt"></i><span>Fast Delivery</span></div>
-                    <div class="ph-hero-feat"><i class="fa-solid fa-satellite-dish"></i><span>Real-Time Tracking</span></div>
-                    <div class="ph-hero-feat"><i class="fa-solid fa-headset"></i><span>24/7 Support</span></div>
-                </div>
-            </div>
-            <div class="ph-hero-right">
-                <div class="ph-hero-truck-wrap">
-                    <img src="images/img(1).jpg" alt="Joy Trading — global logistics truck at cargo port">
-                    <div class="ph-hero-float-badge">
-                        <div class="ph-float-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                        <div class="ph-float-text">
-                            <strong>15+</strong>
-                            <span>Years of Experience</span>
+            <div class="hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Connecting The World,
+                        <span class="highlight">Delivering Excellence.</span>
+                    </h1>
+                    <p class="hero-desc">
+                        End-to-end logistics and supply chain solutions that move your business forward — faster, smarter and safer.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#services" class="btn btn-navy">
+                            Our Services <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <button onclick="openQuoteModal()" class="btn btn-outline">
+                            Request a Quote
+                        </button>
+                    </div>
+
+                    <!-- Trust Stats Under CTA -->
+                    <div class="hero-trust-badges">
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div class="trust-badge-info">
+                                <h4>Global Reach</h4>
+                                <p>100+ Countries</p>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fa-solid fa-clock"></i></div>
+                            <div class="trust-badge-info">
+                                <h4>On-Time Delivery</h4>
+                                <p>99% On-Time</p>
+                            </div>
+                        </div>
+                        <div class="trust-badge">
+                            <div class="trust-badge-icon"><i class="fa-solid fa-headset"></i></div>
+                            <div class="trust-badge-info">
+                                <h4>24/7 Support</h4>
+                                <p>Always Available</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- SERVICES STRIP -->
-    <section class="premiere-services-strip" id="services-strip">
-        <div class="container">
-            <div class="pss-grid">
-                <a href="service-details.html" class="pss-item" id="stripFreightForwarding">
-                    <div class="pss-icon"><i class="fa-solid fa-box-open"></i></div>
-                    <div class="pss-label">Freight Forwarding</div>
-                    <span class="pss-link-text">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="service-details.html" class="pss-item" id="stripOceanTransport">
-                    <div class="pss-icon"><i class="fa-solid fa-ship"></i></div>
-                    <div class="pss-label">Ocean Transport</div>
-                    <span class="pss-link-text">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="service-details-air.html" class="pss-item" id="stripAirFreight">
-                    <div class="pss-icon"><i class="fa-solid fa-plane-departure"></i></div>
-                    <div class="pss-label">Air Freight</div>
-                    <span class="pss-link-text">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="service-details-land.html" class="pss-item" id="stripRoadTransport">
-                    <div class="pss-icon"><i class="fa-solid fa-truck"></i></div>
-                    <div class="pss-label">Road Transport</div>
-                    <span class="pss-link-text">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <a href="service-details-warehousing.html" class="pss-item" id="stripWarehousing">
-                    <div class="pss-icon"><i class="fa-solid fa-warehouse"></i></div>
-                    <div class="pss-label">Warehousing &amp; Distribution</div>
-                    <span class="pss-link-text">Learn More <i class="fa-solid fa-arrow-right"></i></span>
-                </a>
+                <!-- Right Visual Spacer allowing the panoramic background (ship, truck, plane) to be showcased -->
+                <div class="hero-visual-spacer"></div>
             </div>
-        </div>
-    </section>
 
-    <!-- ABOUT SECTION -->
-    <section class="premiere-about" id="about">
-        <div class="container">
-            <div class="pa-images">
-                <div class="pa-img-main" style="position:relative;">
-                    <img src="images/img(10).jpg" alt="Cargo ship on ocean trade route">
-                    <div class="pa-badge-pill">
-                        <strong>15+</strong>
-                        <span>Years of Experience<br>In Logistics Service</span>
+            <!-- 4. FLOATING QUICK SERVICES BAR -->
+            <div class="quick-services-wrap">
+                <div class="quick-services-card">
+                    <div class="quick-service-item" onclick="openQuoteModal('Ocean Freight')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-ship"></i></div>
+                        <span class="qs-title">Ocean Freight</span>
+                    </div>
+                    <div class="quick-service-item" onclick="openQuoteModal('Air Freight')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-plane-departure"></i></div>
+                        <span class="qs-title">Air Freight</span>
+                    </div>
+                    <div class="quick-service-item" onclick="openQuoteModal('Road Transport')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-truck-moving"></i></div>
+                        <span class="qs-title">Road Transport</span>
+                    </div>
+                    <div class="quick-service-item" onclick="openQuoteModal('Warehousing & Distribution')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-warehouse"></i></div>
+                        <span class="qs-title">Warehousing</span>
+                    </div>
+                    <div class="quick-service-item" onclick="openQuoteModal('Customs Clearance')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-passport"></i></div>
+                        <span class="qs-title">Customs Clearance</span>
+                    </div>
+                    <div class="quick-service-item" onclick="openQuoteModal('Project Cargo')">
+                        <div class="qs-icon-box"><i class="fa-solid fa-dolly"></i></div>
+                        <span class="qs-title">Project Cargo</span>
                     </div>
                 </div>
-                <div class="pa-img-sm">
-                    <img src="images/img(10)-2.jpg" alt="Air cargo freight operations">
-                </div>
-                <div class="pa-img-sm">
-                    <img src="images/img(7).jpg" alt="Modern warehousing facility interior">
-                </div>
-            </div>
-            <div class="pa-content">
-                <div class="pa-eyebrow">About Joy Trading</div>
-                <h2 class="pa-title">End-to-End Logistics Solutions You Can Rely On</h2>
-                <p class="pa-desc">With a strong global network and years of industry expertise, Joy Trading ensures your cargo reaches its destination safely, on time, every time. We handle everything — so you can focus on growing your business.</p>
-                <ul class="pa-check-list">
-                    <li><i class="fa-solid fa-check-circle"></i> Reliable export and import end-to-end solutions</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Competitive and fully transparent pricing</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Quality sourcing from trusted global suppliers</li>
-                    <li><i class="fa-solid fa-check-circle"></i> Extensive global partner and carrier network</li>
-                </ul>
-                <a href="about.html" class="pa-discover-btn" id="aboutDiscoverBtn">
-                    Discover More <i class="fa-solid fa-arrow-right"></i>
-                </a>
             </div>
         </div>
     </section>
 
-    <!-- STATS ROW -->
-    <section class="premiere-stats" id="stats">
+    <!-- 5. COMPREHENSIVE SERVICES GRID -->
+    <section class="services-section" id="services">
         <div class="container">
-            <div class="ps-grid">
-                <div class="ps-item">
-                    <div class="ps-icon"><i class="fa-solid fa-calendar-check"></i></div>
-                    <div class="ps-number"><span class="counter-animate" data-target="15">0</span>+</div>
-                    <div class="ps-label">Years of Experience</div>
+            <div class="services-grid-layout">
+                <!-- Left Introduction Card -->
+                <div class="services-intro-card">
+                    <span class="section-tag">OUR SERVICES</span>
+                    <h2>Comprehensive Logistics Solutions For Your Business</h2>
+                    <p>From freight forwarding to final delivery, we provide tailored logistics services that meet your unique business needs with speed, safety and reliability.</p>
+                    <div>
+                        <a href="#quote" onclick="openQuoteModal()" class="btn btn-navy">
+                            Explore All Services <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="ps-item">
-                    <div class="ps-icon"><i class="fa-solid fa-users"></i></div>
-                    <div class="ps-number"><span class="counter-animate" data-target="2500">0</span>+</div>
-                    <div class="ps-label">Happy Clients</div>
+
+                <!-- Service 1: Ocean Freight (Local Asset) -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src=".vscode/asstes/imges/ocean_freight_card.png" alt="Ocean Freight Container Vessel">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Ocean Freight</h3>
+                        <p>Reliable and cost-effective ocean shipping solutions worldwide.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Ocean Freight')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="ps-item">
-                    <div class="ps-icon"><i class="fa-solid fa-boxes-stacked"></i></div>
-                    <div class="ps-number"><span class="counter-animate" data-target="12000">0</span>+</div>
-                    <div class="ps-label">Shipments Delivered</div>
+
+                <!-- Service 2: Air Freight -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1570710891163-6d3b5c47248b?auto=format&fit=crop&w=600&q=80" alt="Air Freight Plane on Runway">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Air Freight</h3>
+                        <p>Fast and secure air freight services for time-critical shipments.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Air Freight')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="ps-item">
-                    <div class="ps-icon"><i class="fa-solid fa-handshake"></i></div>
-                    <div class="ps-number"><span class="counter-animate" data-target="50">0</span>+</div>
-                    <div class="ps-label">Global Partners</div>
+
+                <!-- Service 3: Road Transport -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="White Road Logistics Truck">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Road Transport</h3>
+                        <p>Efficient road transport solutions connecting cities and borders.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Road Transport')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Warehousing & Distribution -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Modern Warehousing Aisles and Distribution">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Warehousing & Distribution</h3>
+                        <p>Modern warehousing and distribution solutions to optimize your supply chain.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Warehousing & Distribution')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Customs Clearance -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80" alt="Customs Inspection and Trade Compliance">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Customs Clearance</h3>
+                        <p>Smooth and hassle-free customs clearance across the globe.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Customs Clearance')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Project Cargo -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1519003722824-194d4455a60c?auto=format&fit=crop&w=600&q=80" alt="Heavy Cargo Crane Container Handling">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Project Cargo</h3>
+                        <p>Specialized handling of oversized and heavy cargo with care.</p>
+                        <a href="javascript:void(0)" onclick="openQuoteModal('Project Cargo')" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 7: Real-Time Tracking -->
+                <div class="service-card">
+                    <div class="service-card-img-box">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600&q=80" alt="Real Time Shipment Tracking on Tablet Screen">
+                    </div>
+                    <div class="service-card-body">
+                        <h3>Real-Time Tracking</h3>
+                        <p>Track your shipments in real-time with our smart tracking system.</p>
+                        <a href="javascript:void(0)" onclick="openTrackingModal()" class="learn-more-link">
+                            Learn More <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- WHY CHOOSE US -->
-    <section class="premiere-why" id="why-choose">
+    <!-- 6. DARK COUNTER / STATS BAR -->
+    <section class="stats-section">
         <div class="container">
-            <div class="pw-header">
-                <span class="pw-eyebrow">Why Choose Us</span>
-                <h2 class="pw-title">We Deliver More Than Just Cargo</h2>
-            </div>
-            <div class="pw-grid">
-                <div class="pw-card">
-                    <div class="pw-card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                    <div class="pw-card-title">Reliable &amp; Secure</div>
-                    <p class="pw-card-desc">We ensure the safety and security of your cargo at every step of its worldwide journey.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <div>
+                        <div class="stat-number">15+</div>
+                        <div class="stat-label">Years of Experience</div>
+                    </div>
                 </div>
-                <div class="pw-card">
-                    <div class="pw-card-icon"><i class="fa-regular fa-clock"></i></div>
-                    <div class="pw-card-title">On-Time Delivery</div>
-                    <p class="pw-card-desc">Punctuality is our promise. Your time, our priority — with every shipment tracked in real time.</p>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div>
+                        <div class="stat-number">2,500+</div>
+                        <div class="stat-label">Happy Clients</div>
+                    </div>
                 </div>
-                <div class="pw-card">
-                    <div class="pw-card-icon"><i class="fa-solid fa-earth-americas"></i></div>
-                    <div class="pw-card-title">Global Network</div>
-                    <p class="pw-card-desc">A strong worldwide carrier network that connects your business to markets across 6 continents.</p>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div>
+                        <div class="stat-number">12,000+</div>
+                        <div class="stat-label">Shipments Delivered</div>
+                    </div>
                 </div>
-                <div class="pw-card">
-                    <div class="pw-card-icon"><i class="fa-solid fa-headset"></i></div>
-                    <div class="pw-card-title">24/7 Support</div>
-                    <p class="pw-card-desc">Our expert team is available round the clock to assist you anytime, anywhere you need us.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TRUSTED PARTNERS -->
-    <section class="premiere-trusted" id="partners">
-        <div class="container">
-            <p class="pt-eyebrow">Trusted by Leading Companies</p>
-            <div class="pt-logos">
-                <div class="pt-logo-item" style="font-size:1.3rem;">&#9632; MAERSK</div>
-                <div class="pt-logo-item dhl" style="font-size:1.4rem;">DHL.</div>
-                <div class="pt-logo-item" style="font-size:1.3rem; color:#4d148c;">Fed<span style="color:#f60;">Ex</span></div>
-                <div class="pt-logo-item" style="font-size:1.2rem; color:#003b7e;">Hapag&#8209;Lloyd</div>
-                <div class="pt-logo-item" style="font-size:1.5rem; color:#2d2d6b; font-style:italic;">MSC</div>
-                <div class="pt-logo-item" style="font-size:1.2rem; color:#e30613; font-weight:900;">ONE</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- NEWSLETTER / CTA -->
-    <section class="premiere-newsletter" id="newsletter">
-        <div class="container">
-            <div class="pn-inner">
-                <div class="pn-left">
-                    <div class="pn-eyebrow">Stay Updated With Our Latest News</div>
-                    <h2 class="pn-title">Subscribe to Our Newsletter</h2>
-                    <p class="pn-desc">Subscribe and get the latest updates, insights and exclusive offers about global trade and logistics delivered to your inbox.</p>
-                </div>
-                <div class="pn-right">
-                    <form class="pn-form" id="newsletterForm">
-                        <input type="email" class="pn-input" placeholder="Enter your email address" id="newsletterEmail" required>
-                        <button type="submit" class="pn-submit" id="newsletterSubmit">Subscribe</button>
-                    </form>
+                <div class="stat-item">
+                    <div class="stat-icon"><i class="fa-solid fa-earth-americas"></i></div>
+                    <div>
+                        <div class="stat-number">100+</div>
+                        <div class="stat-label">Countries Covered</div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
-    <footer class="premiere-footer" id="footer">
+    <!-- 7. WHY CHOOSE US -->
+    <section class="why-choose-section" id="about">
         <div class="container">
-            <div class="pf-grid">
-                <div class="pf-about">
-                    <a href="index.html" class="pf-brand">
-                        <img src="images/ChatGPT Image Aug 17, 2026, 10_58_40 AM.png" alt="Joy Trading" class="pf-brand-img">
-                        <span class="pf-brand-name">JOY <span>TRADING</span></span>
+            <div class="why-header">
+                <span class="section-tag">WHY CHOOSE US</span>
+                <h2>We Deliver More Than Just Cargo</h2>
+            </div>
+            
+            <div class="why-grid">
+                <div class="why-item">
+                    <div class="why-icon-circle">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3>Reliable & Secure</h3>
+                    <p>We ensure the safety and security of your cargo at every step.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon-circle">
+                        <i class="fa-solid fa-stopwatch"></i>
+                    </div>
+                    <h3>On-Time Delivery</h3>
+                    <p>Punctuality is our promise. Your time, our priority.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon-circle">
+                        <i class="fa-solid fa-network-wired"></i>
+                    </div>
+                    <h3>Global Network</h3>
+                    <p>A strong worldwide network that connects your business to the world.</p>
+                </div>
+                <div class="why-item">
+                    <div class="why-icon-circle">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <h3>24/7 Support</h3>
+                    <p>Our expert team is available round the clock to assist you anytime.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. TRUSTED BY GLOBAL COMPANIES -->
+    <section class="trusted-section">
+        <div class="container">
+            <div class="trusted-title">TRUSTED BY GLOBAL COMPANIES</div>
+            <div class="trusted-logos-grid">
+                <div class="partner-logo partner-maersk">
+                    <i class="fa-solid fa-star-of-life"></i> MAERSK
+                </div>
+                <div class="partner-logo partner-dhl">
+                    DHL
+                </div>
+                <div class="partner-logo partner-fedex">
+                    Fed<span>Ex</span>
+                </div>
+                <div class="partner-logo partner-hapag">
+                    <i class="fa-solid fa-anchor"></i> Hapag-Lloyd
+                </div>
+                <div class="partner-logo partner-msc">
+                    msc
+                </div>
+                <div class="partner-logo partner-one">
+                    ONE
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. CALL TO ACTION BANNER -->
+    <section class="cta-section" id="quote">
+        <div class="container">
+            <div class="cta-banner">
+                <div class="cta-left">
+                    <h2>Let's Move Your Business Forward</h2>
+                    <p>Get a customized logistics solution that fits your business needs.</p>
+                </div>
+                
+                <div class="cta-quote-box" onclick="openQuoteModal()">
+                    <div class="quote-box-text">
+                        <h3>Request a Quote Today</h3>
+                        <p>We'll respond within 24 hours!</p>
+                    </div>
+                    <div class="quote-circle-btn">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10. FOOTER -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: About -->
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <div class="logo-symbol"></div>
+                        <div class="logo-text-group">
+                            <span class="logo-title">JOY <span>TRADING</span></span>
+                            <span class="logo-subtitle">GLOBAL EXPORT & IMPORT</span>
+                        </div>
                     </a>
-                    <p class="pf-desc">Joy Trading provides reliable, efficient and cost-effective logistics solutions tailored to your individual needs. Trusted across India, USA, Australia, Canada and China.</p>
-                    <div class="pf-social">
-                        <a href="#" class="pf-social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href="#" class="pf-social-icon" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-                        <a href="#" class="pf-social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                        <a href="#" class="pf-social-icon" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                    <p>Providing world-class logistics and supply chain solutions with a focus on reliability, transparency and excellence.</p>
+                    <div class="social-icons">
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="javascript:void(0)" class="social-btn"><i class="fa-brands fa-instagram"></i></a>
                     </div>
                 </div>
-                <div>
-                    <h3 class="pf-col-title">Services</h3>
-                    <ul class="pf-links">
-                        <li><a href="service-details.html">Freight Forwarding</a></li>
-                        <li><a href="service-details.html">Ocean Transport</a></li>
-                        <li><a href="service-details-air.html">Air Freight</a></li>
-                        <li><a href="service-details-land.html">Road Transport</a></li>
-                        <li><a href="service-details-warehousing.html">Warehousing</a></li>
-                        <li><a href="service-details-customs.html">Customs Clearance</a></li>
+
+                <!-- Col 2: Services -->
+                <div class="footer-column">
+                    <h4>SERVICES</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Ocean Freight</a></li>
+                        <li><a href="#services">Air Freight</a></li>
+                        <li><a href="#services">Road Transport</a></li>
+                        <li><a href="#services">Warehousing & Distribution</a></li>
+                        <li><a href="#services">Customs Clearance</a></li>
+                        <li><a href="#services">Project Cargo</a></li>
+                        <li><a href="#services">Supply Chain Solutions</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="pf-col-title">Company</h3>
-                    <ul class="pf-links">
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="careers.html">Careers</a></li>
-                        <li><a href="our-fleet.html">Our Network</a></li>
-                        <li><a href="blog.html">News &amp; Media</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
+
+                <!-- Col 3: Solutions -->
+                <div class="footer-column">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="footer-links">
+                        <li><a href="#solutions">Freight Forwarding</a></li>
+                        <li><a href="#solutions">Door-to-Door Delivery</a></li>
+                        <li><a href="#solutions">Trade Compliance</a></li>
+                        <li><a href="#solutions">eCommerce Logistics</a></li>
+                        <li><a href="#solutions">Cold Chain Logistics</a></li>
+                        <li><a href="#solutions">Express Delivery</a></li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="pf-col-title">Contact Us</h3>
-                    <ul class="pf-contact-list">
+
+                <!-- Col 4: Company -->
+                <div class="footer-column">
+                    <h4>COMPANY</h4>
+                    <ul class="footer-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#about">Careers</a></li>
+                        <li><a href="#about">Our Network</a></li>
+                        <li><a href="#about">News & Media</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 5: Contact Us -->
+                <div class="footer-column">
+                    <h4>CONTACT US</h4>
+                    <ul class="footer-contact-list">
                         <li>
                             <i class="fa-solid fa-location-dot"></i>
-                            <span>N-Heights, Phase 2, Gachibowli, HITEC City, Hyderabad – 500081, India</span>
+                            <span>123 Logistics Way,<br>Mumbai, India 400001</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-phone"></i>
-                            <span>+91 99857 64875</span>
+                            <span>+91 98765 43210</span>
                         </li>
                         <li>
                             <i class="fa-solid fa-envelope"></i>
-                            <span>info@joytrading.co</span>
+                            <span>info@joytrading.com</span>
                         </li>
                         <li>
                             <i class="fa-regular fa-clock"></i>
-                            <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
+                            <span>Mon - Sat: 9:00 AM - 6:00 PM</span>
                         </li>
                     </ul>
                 </div>
             </div>
-            <div class="pf-bottom">
+
+            <div class="footer-bottom">
                 <p>&copy; 2025 Joy Trading. All Rights Reserved.</p>
-                <div class="pf-bottom-links">
-                    <a href="faq.html">Privacy Policy</a>
-                    <a href="faq.html">Terms &amp; Conditions</a>
-                    <a href="contact.html">Sitemap</a>
+                <div class="footer-legal">
+                    <a href="javascript:void(0)">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="javascript:void(0)">Terms & Conditions</a>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Scroll to Top -->
-    <div class="scroll-top-btn" id="scrollTopBtn" title="Back to Top" role="button" aria-label="Scroll to top">
-        <i class="fa-solid fa-chevron-up"></i>
+    <!-- MODAL: REQUEST A QUOTE -->
+    <div class="modal-overlay" id="quoteModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Request a Free Quote</h3>
+            <p>Fill out the details below and our logistics specialist will contact you within 24 hours.</p>
+            <form onsubmit="handleQuoteSubmit(event)">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" class="form-control" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Service Required</label>
+                    <select class="form-control" id="quoteServiceSelect">
+                        <option value="Ocean Freight">Ocean Freight</option>
+                        <option value="Air Freight">Air Freight</option>
+                        <option value="Road Transport">Road Transport</option>
+                        <option value="Warehousing & Distribution">Warehousing & Distribution</option>
+                        <option value="Customs Clearance">Customs Clearance</option>
+                        <option value="Project Cargo">Project Cargo</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Shipment Origin & Destination</label>
+                    <input type="text" class="form-control" placeholder="e.g. Mumbai to Dubai" required>
+                </div>
+                <button type="submit" class="btn btn-orange" style="width: 100%; margin-top: 10px;">Submit Quote Request</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="js/plugins.js"></script>
-    <script src="js/main.js"></script>
+    <!-- MODAL: TRACK SHIPMENT -->
+    <div class="modal-overlay" id="trackModal">
+        <div class="modal-box">
+            <button class="modal-close" onclick="closeModals()"><i class="fa-solid fa-xmark"></i></button>
+            <h3>Track Your Shipment</h3>
+            <p>Enter your Bill of Lading (B/L) or Tracking Number to get live container status.</p>
+            <form onsubmit="handleTrackSubmit(event)">
+                <div class="form-group">
+                    <label>Tracking / Waybill / Container Number</label>
+                    <input type="text" id="trackingInput" class="form-control" placeholder="e.g. JOY-892410-IN" required>
+                </div>
+                <button type="submit" class="btn btn-navy" style="width: 100%; margin-top: 10px;">Track Live Status</button>
+            </form>
+            <div id="trackingResult" style="display: none; margin-top: 20px; padding: 15px; background: #f8fafc; border-radius: 8px; border-left: 4px solid var(--accent-orange);">
+                <strong style="color: var(--primary-navy);">Status: IN TRANSIT</strong>
+                <p style="font-size: 12.5px; color: var(--text-muted); margin-top: 4px;">Vessel Joy Voyager • ETA: 2 Days • Current Location: Arabian Sea</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT -->
     <script>
-        // Mobile Navigation
-        const mobileToggle = document.getElementById('mobileMenuToggle');
-        const mobileDrawer = document.getElementById('mobileDrawer');
-        const mobileOverlay = document.getElementById('mobileOverlay');
-        const mobileClose = document.getElementById('mobileClose');
-
-        function openMobileNav() {
-            mobileDrawer.classList.add('open');
-            mobileOverlay.classList.add('open');
-            document.body.style.overflow = 'hidden';
+        function openQuoteModal(serviceName) {
+            if(serviceName) {
+                const select = document.getElementById('quoteServiceSelect');
+                if(select) select.value = serviceName;
+            }
+            document.getElementById('quoteModal').classList.add('active');
         }
-        function closeMobileNav() {
-            mobileDrawer.classList.remove('open');
-            mobileOverlay.classList.remove('open');
-            document.body.style.overflow = '';
-        }
-        if (mobileToggle) mobileToggle.addEventListener('click', openMobileNav);
-        if (mobileClose) mobileClose.addEventListener('click', closeMobileNav);
-        if (mobileOverlay) mobileOverlay.addEventListener('click', closeMobileNav);
 
-        // Scroll to Top
-        const scrollTopBtn = document.getElementById('scrollTopBtn');
-        window.addEventListener('scroll', function() {
-            scrollTopBtn.classList.toggle('active', window.scrollY > 300);
-        });
-        if (scrollTopBtn) {
-            scrollTopBtn.addEventListener('click', function() {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+        function openTrackingModal() {
+            document.getElementById('trackModal').classList.add('active');
+        }
+
+        function closeModals() {
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                modal.classList.remove('active');
             });
         }
 
-        // Dynamic body padding for fixed header
-        function setBodyPadding() {
-            const header = document.getElementById('mainHeader');
-            const topbar = document.querySelector('.premiere-topbar');
-            if (header) {
-                const headerH = header.offsetHeight;
-                document.body.style.paddingTop = headerH + 'px';
+        function handleQuoteSubmit(e) {
+            e.preventDefault();
+            alert('Thank you! Your quote request has been received. Our logistics team will contact you within 24 hours.');
+            closeModals();
+        }
+
+        function handleTrackSubmit(e) {
+            e.preventDefault();
+            const resultBox = document.getElementById('trackingResult');
+            resultBox.style.display = 'block';
+        }
+
+        function toggleMobileNav() {
+            const nav = document.querySelector('.nav-links');
+            if (nav.style.display === 'flex') {
+                nav.style.display = 'none';
+            } else {
+                nav.style.display = 'flex';
+                nav.style.flexDirection = 'column';
+                nav.style.position = 'absolute';
+                nav.style.top = '70px';
+                nav.style.left = '0';
+                nav.style.width = '100%';
+                nav.style.background = '#ffffff';
+                nav.style.padding = '20px';
+                nav.style.boxShadow = '0 10px 25px rgba(0,0,0,0.1)';
             }
         }
-        setBodyPadding();
-        window.addEventListener('resize', setBodyPadding);
 
-        // Counter Animation
-        (function animateCounters() {
-            const counters = document.querySelectorAll('.counter-animate');
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting && !entry.target.dataset.done) {
-                        entry.target.dataset.done = '1';
-                        const target = parseInt(entry.target.dataset.target);
-                        const duration = 1800;
-                        const step = target / (duration / 16);
-                        let current = 0;
-                        const timer = setInterval(() => {
-                            current += step;
-                            if (current >= target) { current = target; clearInterval(timer); }
-                            entry.target.textContent = Math.floor(current).toLocaleString();
-                        }, 16);
-                    }
-                });
-            }, { threshold: 0.3 });
-            counters.forEach(el => observer.observe(el));
-        })();
-
-        // Newsletter Submit
-        const newsletterForm = document.getElementById('newsletterForm');
-        if (newsletterForm) {
-            newsletterForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                const btn = document.getElementById('newsletterSubmit');
-                btn.textContent = 'Subscribed!';
-                btn.style.background = '#16a34a';
-                setTimeout(() => {
-                    btn.textContent = 'Subscribe';
-                    btn.style.background = '';
-                    this.reset();
-                }, 3000);
+        // Close modal when clicking outside
+        window.onclick = function(event) {
+            document.querySelectorAll('.modal-overlay').forEach(modal => {
+                if (event.target === modal) {
+                    modal.classList.remove('active');
+                }
             });
         }
     </script>
